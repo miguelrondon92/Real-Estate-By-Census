@@ -5,7 +5,7 @@ import requests
 #url, html, xpath
 url = "https://www.realtor.com/research/data/"
 html = requests.get(url).text
-xpath = "//table[@id = 'supsystic-table-12']//td[@data-cell-id = 'F3']/a/@href"
+xpath = "//table[@id = 'supsystic-table-12']//td[@data-cell-id = 'E3']/a/@href"
 
 sel = Selector(text=html)
 links = sel.xpath(xpath).extract()
