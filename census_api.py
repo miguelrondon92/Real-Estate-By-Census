@@ -2,6 +2,9 @@ import requests
 import cen_api 
 
 
+census_vars = requests.get(
+    "https://api.census.gov/data/2020/dec/pl/variables.json")
+
 host= "https://api.census.gov/data/"
 year= "2020"
 dataset_acronym= "/dec/pl"
@@ -17,3 +20,5 @@ query_url= f"{host}{year}{dataset_acronym}{g}{variables}{location}{key_pref}{key
 r = requests.get(query_url).text
 print(r)
 print(len(r))
+print("Variables in json")
+print(census_vars.json())
