@@ -39,7 +39,6 @@ def create_df():
     return(census_df)
 
 census_df = create_df()
-print(census_df)
 
 
 
