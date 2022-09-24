@@ -2,7 +2,7 @@ import requests
 import cen_api 
 import pandas as pd 
 
-variables = "NAME,P2_001N,P2_002N,P3_004N"
+variables = "NAME,P2_001N,P2_002N,P2_005N,P2_006N,P2_007N,P2_008N,P2_009N,P2_010N,P2_011N,P2_012N"
 
 def import_census_data(variables):
     host= "https://api.census.gov/data/"
@@ -36,13 +36,10 @@ def create_df():
     census_df = census_df.drop(labels='NAME', axis=1)
     #add new cols 
     census_df = pd.concat([new_cols, census_df], axis=1)
-    print(census_df)
+    return(census_df)
 
-
-
-
-
-create_df()
+census_df = create_df()
+print(census_df)
 
 
 
