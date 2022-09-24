@@ -9,7 +9,7 @@ def import_census_data(variables):
     year= "2020"
     dataset_acronym= "/dec/pl"
     g= "?get="
-    location= "&for=county:*"
+    location= "&for=county:*" #specifically county data... 
     key_pref= "&key="
     key= cen_api.API_KEY
     query_url= f"{host}{year}{dataset_acronym}{g}{variables}{location}{key_pref}{key}"
@@ -26,10 +26,18 @@ def get_vars_list(variables):
 
 
 def create_df():
+    #make df 
     vars_list = get_vars_list(variables)
     census_data = import_census_data(variables)
     census_df = pd.DataFrame(census_data[1:], columns=vars_list)
-    print(census_df.head(20))
+    #clean column names
+    new_cols = census_df['NAME'].str.split(",", n=1, expand=True)
+    new_cols.columns = ["County", "State"]
+    census_df = census_df.drop(labels='NAME', axis=1)
+    #add new cols 
+    census_df = pd.concat([new_cols, census_df], axis=1)
+    print(census_df)
+
 
 
 
