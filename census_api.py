@@ -37,7 +37,6 @@ def create_df():
     census_df = census_df.drop(labels='NAME', axis=1)
     #add new cols 
     census_df = pd.concat([new_cols, census_df], axis=1)
-    print(census_df)
     return(census_df)
 
 census_df = create_df()
