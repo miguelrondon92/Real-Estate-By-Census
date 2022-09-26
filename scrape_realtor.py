@@ -4,11 +4,11 @@ import requests
 
 url = "https://www.realtor.com/research/data/"
 html = requests.get(url).text
-xpath = "//table[@id = 'supsystic-table-12']//td[@data-cell-id = 'F3']/a/@href"
+xpath = "//table[@id = 'supsystic-table-12']//td[@data-cell-id = 'E3']/a/@href"
 dtype_dict = {
     'month_date_yyyymm': 'str',
-    'postal_code': 'str',
-    'zip_name':	'str',
+    'county_fips': 'str',
+    'county_name':	'str',
     'median_listing_price': 'Int64',
     'active_listing_count': "Int64",
     'median_days_on_market': "Int64",
@@ -34,3 +34,5 @@ links = sel.xpath(xpath).extract()
 #ingest data into pandas DF
 realtor_df = pd.read_csv(
     links[0], dtype=dtype_dict, skipfooter=1, usecols=list(df_keys))
+
+print(realtor_df)
