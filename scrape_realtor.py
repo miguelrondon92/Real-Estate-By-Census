@@ -34,5 +34,8 @@ links = sel.xpath(xpath).extract()
 #ingest data into pandas DF
 realtor_df = pd.read_csv(
     links[0], dtype=dtype_dict, skipfooter=1, usecols=list(df_keys))
-
+new_cols= realtor_df['county_name'].str.split(",",expand=True)
+new_cols.columns= ['County', 'State']
+realtor_df = realtor_df.drop(labels= 'county_name', axis=1)
+realtor_df = pd.concat([new_cols, realtor_df], axis= 1)
 print(realtor_df)
