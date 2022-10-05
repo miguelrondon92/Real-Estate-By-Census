@@ -1,0 +1,17 @@
+---
+title: "realtor_census_analysis.rmd"
+output: html_document
+author: "Miguel Rondon"
+date: "2022-10-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r load analytical file}
+
+rcdf <- read.csv("analytical_files/realtor_census.csv")
+
+``` 
