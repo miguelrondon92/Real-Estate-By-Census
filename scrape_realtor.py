@@ -23,18 +23,23 @@ dtype_dict = {
     'pending_ratio': 'Float64',
     'quality_flag': 'Int64'
 }
-
+no_scrape_link = "https://econdata.s3-us-west-2.amazonaws.com/Reports/Core/RDC_Inventory_Core_Metrics_County.csv"
 df_keys = dtype_dict.keys()
-
 
 #get csv file from website
 sel = Selector(text=html)
 links = sel.xpath(xpath).extract()
-
 #ingest data into pandas DF
-realtor_df = pd.read_csv(
-    links[0], dtype=dtype_dict, skipfooter=1, usecols=list(df_keys))
+try:
+    realtor_df = pd.read_csv(
+        links[0], dtype=dtype_dict, usecols=list(df_keys))
+except:
+    print("Busted... using scraping alternative...")
+    realtor_df = pd.read_csv(no_scrape_link, dtype= dtype_dict, usecols=list(df_keys))
+
+
 new_cols= realtor_df['county_name'].str.split(",",expand=True)
 new_cols.columns= ['County', 'State']
 realtor_df = realtor_df.drop(labels= 'county_name', axis=1)
+realtor_df = realtor_df[:-1]
 realtor_df = pd.concat([new_cols, realtor_df], axis= 1)
