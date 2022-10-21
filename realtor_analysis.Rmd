@@ -27,20 +27,6 @@ source("~/Desktop/CODE/Data Projects/Real-Estate-By-Census/shapefiles.R")
 
 ```
 
-#transforming data so that it can be used for analysis.
-
-```{r main}
-rval_main <- reactive({ main_df %>% 
-          st_as_sf() %>% 
-        filter(state == input$state,
-               median_listing_price <= input$median_listing_price,
-               median_square_feet <= input$median_sq_ft,
-               active_listing_count <= input$active_listings
-               #county_pop_size %in% input$county_pop_size
-               ) %>% 
-          as(Class = "Spatial")
-      })
-```
 
 
 #Getting familiar with the data, then Getting rid of outliers that may skews the
