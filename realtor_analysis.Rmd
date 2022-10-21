@@ -21,62 +21,27 @@ library(rgdal)
 ```
 
 # Simple Ingestion of only necessary data. 
-```{r load analytical file}
 
-rcdf <- read.csv("analytical_files/realtor_census.csv") %>% 
-  select(2,19, 18, 5:17, 23:32) %>% 
-  filter(!is.na(total_hispanic_or_latino))
-
-
-``` 
-
-#transforming data so that it can be used for analysis.
-``` {r next}
-rcdf2 <- rcdf %>% 
-  mutate(total_pop = total,
-         total_pop_white_perc = total_population_of_one_race_white_alone / total_pop,
-         total_pop_black_perc = total_population_of_one_race_black_or_african_american_alone / total_pop,
-         total_pop_american_indigenous_perc = total_population_of_one_race_american_indian_and_alaska_native_ / total_pop,
-         total_pop_asian_perc = total_population_of_one_race_asian_alone / total_pop, 
-total_pop_pacific_islander_perc = 
-  total_population_of_one_race_native_hawaiian_and_other_pacific_ / total_pop,
-         total_pop_other_perc = total_population_of_one_race_some_other_race_alone / total_pop, 
-         total_pop_mixed_races_perc = total_population_of_two_or_more_races / total_pop,
-         total_pop_hispanic_perc = total_hispanic_or_latino / total_pop,
-         county_pop_size = case_when(total_pop < 50000 ~ "Non Metro",
-                                     total_pop < 250000 ~ "Small Metro",
-                                     total_pop < 1000000 ~ "Mid Metro", 
-                                     total_pop >= 1000000 ~ "Large Metro"
-                                     ),
-        most_pop_perc = pmax(total_pop_white_perc, total_pop_black_perc, total_pop_american_indigenous_perc,
-                         total_pop_asian_perc, total_pop_pacific_islander_perc, total_pop_other_perc,
-                         total_pop_mixed_races_perc, total_pop_hispanic_perc),
-         largest_race_group = case_when(total_pop_hispanic_perc == most_pop_perc ~ "Hispanic",
-                                   total_pop_white_perc == most_pop_perc ~ "White",
-                                   total_pop_black_perc == most_pop_perc ~ "Black",
-                                   total_pop_american_indigenous_perc == most_pop_perc ~ "Native American", 
-                                   total_pop_asian_perc == most_pop_perc ~ "Asian", 
-                                   total_pop_pacific_islander_perc == most_pop_perc ~ "Pacific Islander", 
-                                   total_pop_other_perc > most_pop_perc ~ "Other Race", 
-                                   total_pop_mixed_races_perc > most_pop_perc ~ "Mixed Races",
-                                   total_pop_white_perc == most_pop_perc ~ "White"
-                                   )
-         ) %>% 
-  filter(!is.na(median_listing_price), !is.na(median_square_feet)
-    #new_listing_count > 0,
-         #majority_hisp_or_race == "Majority Native American"
-         #median_listing_price < 500000, 
-         #majority_hisp_or_race != "Majority White"
-         #majority_hisp_or_race != "No Majority Race", 
-         #county_pop_size != "Non Metropolitan",
-         #county_pop_size == "Large Metropolitan"
-         #majority_hisp_or_race == "Majority Black"
-    )
-  #filter(county_pop_size != 'Non Metropolitan', majority_hisp_or_race == "Majority Hispanic")
-  
-  #filter(total_pop_hispanic_perc > .5)#, median_listing_price < 750000)#, county_pop_size != 'Non Metropolitan')
+```{r source}
+source("~/Desktop/CODE/Data Projects/Real-Estate-By-Census/shapefiles.R")
 
 ```
+
+#transforming data so that it can be used for analysis.
+
+```{r main}
+rval_main <- reactive({ main_df %>% 
+          st_as_sf() %>% 
+        filter(state == input$state,
+               median_listing_price <= input$median_listing_price,
+               median_square_feet <= input$median_sq_ft,
+               active_listing_count <= input$active_listings
+               #county_pop_size %in% input$county_pop_size
+               ) %>% 
+          as(Class = "Spatial")
+      })
+```
+
 
 #Getting familiar with the data, then Getting rid of outliers that may skews the
 data further, then utilizing a histogram to view the data.
@@ -120,7 +85,6 @@ ggplot(sample_rcdf, aes(median_listing_price / 1000, median_square_feet,
   scale_x_log10() + scale_y_log10()
 
 ``` 
-
 
 There is not a strong correlation between housing prices and county population 
 size. This means that independent of what the county population is, the median 
