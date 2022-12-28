@@ -7,5 +7,6 @@ etl_dag= DAG("realtor_census_dashboard_etl")
 
 part_1 = BashOperator(
     task_id= "Extract & Transform Data",
-    bash_command= 'jupyter nbconvert --execute tranform_dfs.ipynb'
+    bash_command= 'jupyter nbconvert --execute tranform_dfs.ipynb',
+    dag=etl_dag
 )
