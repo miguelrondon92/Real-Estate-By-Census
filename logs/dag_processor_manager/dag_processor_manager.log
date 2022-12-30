@@ -1,0 +1,477 @@
+[2022-12-29T22:50:52.117-0500] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2022-12-29T22:50:52.118-0500] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2022-12-29T22:50:52.118-0500] {manager.py:486} INFO - Checking for new files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags every 300 seconds
+[2022-12-29T22:50:52.118-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T22:50:52.133-0500] {manager.py:729} INFO - There are 39 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T22:51:21.413-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------------------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                                                                                        0           1  0.11s           2022-12-30T03:50:52
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_latest_only.py                                               0           0
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_local_kubernetes_executor.py                                 0           0  0.12s           2022-12-30T03:51:20
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_complex.py                                                   0           0
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py                                  0           0  0.11s           2022-12-30T03:50:55
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_external_task_marker_dag.py                                  0           0
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_bash_operator.py                                             0           0
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_operator.py                                           0           0
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_labels.py                                             0           0
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_dag_decorator.py                                             0           0
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_operator_decorator.py                                 0           0
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py                               0           0
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_datasets.py                                                  0           0
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_kubernetes_executor.py                                       0           0
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py                              0           0
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_datetime_operator.py                                  0           0
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                                                   0           0  0.11s           2022-12-30T03:50:54
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                                                    0           0  0.11s           2022-12-30T03:50:53
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_task_group_decorator.py                                      1           0  0.22s           2022-12-30T03:51:06
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_python_operator.py                                           1           0  0.22s           2022-12-30T03:51:16
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_short_circuit_operator.py                                    1           0  0.22s           2022-12-30T03:51:11
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/tutorial_taskflow_api.py                                             1           0  0.21s           2022-12-30T03:50:57
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_task_group.py                                                1           0  0.22s           2022-12-30T03:51:07
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/tutorial.py                                                          1           0  0.21s           2022-12-30T03:50:58
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_sla_dag.py                                                   1           0  0.22s           2022-12-30T03:51:08
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_passing_params_via_test_command.py                           1           0  0.22s           2022-12-30T03:51:17
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_latest_only_with_trigger.py                                  1           0  0.22s           2022-12-30T03:51:21
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_time_delta_sensor_async.py                                   1           0  0.22s           2022-12-30T03:51:04
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py                                                      1           0  0.21s           2022-12-30T03:51:01
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_skip_dag.py                                                  1           0  0.21s           2022-12-30T03:51:10
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_short_circuit_decorator.py                                   1           0  0.22s           2022-12-30T03:51:12
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/tutorial_dag.py                                                      1           0  0.21s           2022-12-30T03:50:57
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_target_dag.py                                        1           0  0.21s           2022-12-30T03:51:02
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_sensor_decorator.py                                          1           0  0.22s           2022-12-30T03:51:15
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_sensors.py                                                   1           0  0.22s           2022-12-30T03:51:13
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py                                         1           0  0.22s           2022-12-30T03:51:18
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py                                    1           0  0.22s           2022-12-30T03:51:03
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py                                                  2           0  0.21s           2022-12-30T03:50:59
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_subdag_operator.py                                           3           0  0.21s           2022-12-30T03:51:07
+================================================================================
+[2022-12-29T22:51:52.132-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------------------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                                                                                        0           1  0.11s           2022-12-30T03:51:37
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_local_kubernetes_executor.py                                 0           0  0.12s           2022-12-30T03:51:20
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py                                  0           0  0.11s           2022-12-30T03:51:40
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_kubernetes_executor.py                                       0           0  0.11s           2022-12-30T03:51:22
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                                                   0           0  0.11s           2022-12-30T03:51:39
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                                                    0           0  0.11s           2022-12-30T03:51:38
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_latest_only.py                                               1           0  0.22s           2022-12-30T03:51:22
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_task_group_decorator.py                                      1           0  0.11s           2022-12-30T03:51:48
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_complex.py                                                   1           0  0.22s           2022-12-30T03:51:27
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_python_operator.py                                           1           0  0.22s           2022-12-30T03:51:16
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_bash_operator.py                                             1           0  0.22s           2022-12-30T03:51:36
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_short_circuit_operator.py                                    1           0  0.22s           2022-12-30T03:51:11
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_operator.py                                           1           0  0.22s           2022-12-30T03:51:31
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_labels.py                                             1           0  0.22s           2022-12-30T03:51:33
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/tutorial_taskflow_api.py                                             1           0  0.12s           2022-12-30T03:51:41
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_task_group.py                                                1           0  0.12s           2022-12-30T03:51:49
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/tutorial.py                                                          1           0  0.12s           2022-12-30T03:51:43
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_sla_dag.py                                                   1           0  0.12s           2022-12-30T03:51:52
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_passing_params_via_test_command.py                           1           0  0.22s           2022-12-30T03:51:17
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_latest_only_with_trigger.py                                  1           0  0.22s           2022-12-30T03:51:21
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_time_delta_sensor_async.py                                   1           0  0.12s           2022-12-30T03:51:48
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_dag_decorator.py                                             1           0  0.22s           2022-12-30T03:51:26
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py                                                      1           0  0.22s           2022-12-30T03:51:44
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_operator_decorator.py                                 1           0  0.22s           2022-12-30T03:51:30
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py                               1           0  0.22s           2022-12-30T03:51:34
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_skip_dag.py                                                  1           0  0.21s           2022-12-30T03:51:10
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_short_circuit_decorator.py                                   1           0  0.22s           2022-12-30T03:51:12
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/tutorial_dag.py                                                      1           0  0.11s           2022-12-30T03:51:42
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_target_dag.py                                        1           0  0.22s           2022-12-30T03:51:45
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_sensor_decorator.py                                          1           0  0.22s           2022-12-30T03:51:15
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py                              1           0  0.22s           2022-12-30T03:51:29
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_sensors.py                                                   1           0  0.22s           2022-12-30T03:51:13
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py                                         1           0  0.22s           2022-12-30T03:51:18
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py                                    1           0  0.11s           2022-12-30T03:51:47
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_external_task_marker_dag.py                                  2           0  0.22s           2022-12-30T03:51:24
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_xcomargs.py                                                  2           0  0.11s           2022-12-30T03:51:43
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_datetime_operator.py                                  3           0  0.22s           2022-12-30T03:51:35
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_subdag_operator.py                                           3           0  0.22s           2022-12-30T03:51:50
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_datasets.py                                                  6           0  0.32s           2022-12-30T03:51:25
+================================================================================
+[2022-12-29T22:52:08.647-0500] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2022-12-29T22:52:14.446-0500] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2022-12-29T22:52:14.447-0500] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2022-12-29T22:52:14.447-0500] {manager.py:486} INFO - Checking for new files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags every 300 seconds
+[2022-12-29T22:52:14.447-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T22:52:14.449-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T22:52:44.042-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           0           1  0.11s           2022-12-30T03:52:14
+================================================================================
+[2022-12-29T22:53:14.441-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           0           1  0.11s           2022-12-30T03:52:44
+================================================================================
+[2022-12-29T22:53:44.870-0500] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2022-12-29T22:53:47.880-0500] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2022-12-29T22:53:47.881-0500] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2022-12-29T22:53:47.881-0500] {manager.py:486} INFO - Checking for new files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags every 300 seconds
+[2022-12-29T22:53:47.881-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T22:53:47.883-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T23:01:06.056-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T23:01:06.062-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T23:01:14.413-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.11s           2022-12-30T04:01:06
+================================================================================
+[2022-12-29T23:19:11.238-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T23:19:11.243-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T23:35:52.066-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T23:35:52.069-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T23:52:16.043-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T23:52:16.045-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-29T23:52:19.623-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.21s           2022-12-30T04:52:16
+================================================================================
+[2022-12-30T00:08:07.106-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T00:08:07.109-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T00:20:16.180-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T00:20:16.185-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T00:20:26.339-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T05:20:16
+================================================================================
+[2022-12-30T00:35:47.412-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T00:35:47.415-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T00:52:37.565-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T00:52:37.571-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T01:09:33.536-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T01:09:33.541-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T01:26:33.840-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T01:26:33.844-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T01:26:36.028-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.23s           2022-12-30T06:26:34
+================================================================================
+[2022-12-30T01:42:12.443-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T01:42:12.447-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T01:57:52.802-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T01:57:52.806-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T02:14:22.944-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T02:14:22.950-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T02:30:06.967-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T02:30:06.972-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T02:30:07.116-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.11s           2022-12-30T07:30:07
+================================================================================
+[2022-12-30T02:47:00.850-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T02:47:00.853-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T03:04:20.667-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T03:04:20.672-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T03:20:55.819-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T03:20:55.822-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T03:20:58.685-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.21s           2022-12-30T08:20:56
+================================================================================
+[2022-12-30T03:36:31.328-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T03:36:31.332-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T03:52:24.660-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T03:52:24.666-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T04:09:51.573-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T04:09:51.578-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T04:26:29.010-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T04:26:29.015-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T04:26:31.179-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.11s           2022-12-30T09:26:29
+================================================================================
+[2022-12-30T04:44:30.848-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T04:44:30.851-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T04:59:57.930-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T04:59:57.935-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T05:15:39.697-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T05:15:39.701-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T05:31:09.466-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T05:31:09.470-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T05:31:10.683-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.11s           2022-12-30T10:31:09
+================================================================================
+[2022-12-30T05:48:47.813-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T05:48:47.817-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T06:05:12.437-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T06:05:12.553-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T06:22:28.850-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T06:22:28.856-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T06:30:20.794-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T06:30:20.797-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T06:30:21.617-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T11:30:20
+================================================================================
+[2022-12-30T06:46:53.324-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T06:46:53.329-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T07:04:28.470-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T07:04:28.474-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T07:22:00.658-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T07:22:00.666-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T07:22:05.890-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.21s           2022-12-30T12:22:00
+================================================================================
+[2022-12-30T07:37:20.232-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T07:37:20.237-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T07:55:03.205-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T07:55:03.211-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T08:11:29.180-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T08:11:29.294-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T08:27:42.329-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T08:27:42.331-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T08:27:44.356-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.32s           2022-12-30T13:27:42
+================================================================================
+[2022-12-30T08:43:18.159-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T08:43:18.163-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T08:58:57.974-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T08:58:57.978-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T08:59:14.967-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.31s           2022-12-30T13:58:58
+================================================================================
+[2022-12-30T08:59:45.105-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.22s           2022-12-30T13:59:28
+================================================================================
+[2022-12-30T09:00:15.219-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.22s           2022-12-30T13:59:59
+================================================================================
+[2022-12-30T09:00:45.376-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.22s           2022-12-30T14:00:29
+================================================================================
+[2022-12-30T09:01:15.527-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.22s           2022-12-30T14:00:59
+================================================================================
+[2022-12-30T09:01:45.684-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:01:30
+================================================================================
+[2022-12-30T09:02:15.811-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:02:00
+================================================================================
+[2022-12-30T09:02:46.161-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.22s           2022-12-30T14:02:31
+================================================================================
+[2022-12-30T09:03:31.821-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.22s           2022-12-30T14:03:15
+================================================================================
+[2022-12-30T09:03:58.051-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T09:03:58.057-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T09:04:01.935-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:03:45
+================================================================================
+[2022-12-30T09:04:32.082-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:04:16
+================================================================================
+[2022-12-30T09:05:02.236-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:04:46
+================================================================================
+[2022-12-30T09:05:32.351-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:05:17
+================================================================================
+[2022-12-30T09:06:02.485-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:05:47
+================================================================================
+[2022-12-30T09:06:32.604-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.22s           2022-12-30T14:06:17
+================================================================================
+[2022-12-30T09:07:02.735-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:06:47
+================================================================================
+[2022-12-30T09:07:32.949-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:07:17
+================================================================================
+[2022-12-30T09:08:03.051-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:07:48
+================================================================================
+[2022-12-30T09:08:33.423-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:08:18
+================================================================================
+[2022-12-30T09:08:58.910-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T09:08:58.914-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2022-12-30T09:09:03.669-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:08:48
+================================================================================
+[2022-12-30T09:09:38.842-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:09:19
+================================================================================
+[2022-12-30T09:10:08.917-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:09:49
+================================================================================
+[2022-12-30T09:10:39.124-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.12s           2022-12-30T14:10:20
+================================================================================

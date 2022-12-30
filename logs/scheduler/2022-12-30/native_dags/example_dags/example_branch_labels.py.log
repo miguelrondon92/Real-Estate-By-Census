@@ -1,0 +1,11 @@
+[2022-12-29T22:51:32.840-0500] {processor.py:153} INFO - Started process (PID=7226) to work on /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_labels.py
+[2022-12-29T22:51:32.842-0500] {processor.py:743} INFO - Processing file /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_labels.py for tasks to queue
+[2022-12-29T22:51:32.843-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:32.843-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_labels.py
+[2022-12-29T22:51:32.862-0500] {processor.py:753} INFO - DAG(s) dict_keys(['example_branch_labels']) retrieved from /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_labels.py
+[2022-12-29T22:51:32.937-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:32.936-0500] {manager.py:504} INFO - Created Permission View: can read on DAG:example_branch_labels
+[2022-12-29T22:51:32.942-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:32.942-0500] {manager.py:504} INFO - Created Permission View: can delete on DAG:example_branch_labels
+[2022-12-29T22:51:32.946-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:32.946-0500] {manager.py:504} INFO - Created Permission View: can edit on DAG:example_branch_labels
+[2022-12-29T22:51:32.947-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:32.946-0500] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-29T22:51:32.955-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:32.954-0500] {dag.py:2697} INFO - Creating ORM DAG for example_branch_labels
+[2022-12-29T22:51:32.962-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:32.962-0500] {dag.py:3427} INFO - Setting next_dagrun for example_branch_labels to 2022-12-29T00:00:00+00:00, run_after=2022-12-30T00:00:00+00:00
+[2022-12-29T22:51:32.973-0500] {processor.py:175} INFO - Processing /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_branch_labels.py took 0.137 seconds

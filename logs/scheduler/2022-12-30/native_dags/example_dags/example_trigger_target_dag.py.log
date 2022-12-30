@@ -1,0 +1,18 @@
+[2022-12-29T22:51:02.172-0500] {processor.py:153} INFO - Started process (PID=7189) to work on /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2022-12-29T22:51:02.174-0500] {processor.py:743} INFO - Processing file /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2022-12-29T22:51:02.175-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:02.175-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2022-12-29T22:51:02.201-0500] {processor.py:753} INFO - DAG(s) dict_keys(['example_trigger_target_dag']) retrieved from /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2022-12-29T22:51:02.281-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:02.281-0500] {manager.py:504} INFO - Created Permission View: can read on DAG:example_trigger_target_dag
+[2022-12-29T22:51:02.288-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:02.288-0500] {manager.py:504} INFO - Created Permission View: can delete on DAG:example_trigger_target_dag
+[2022-12-29T22:51:02.293-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:02.292-0500] {manager.py:504} INFO - Created Permission View: can edit on DAG:example_trigger_target_dag
+[2022-12-29T22:51:02.293-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:02.293-0500] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-29T22:51:02.301-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:02.301-0500] {dag.py:2697} INFO - Creating ORM DAG for example_trigger_target_dag
+[2022-12-29T22:51:02.308-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:02.308-0500] {dag.py:3427} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2022-12-29T22:51:02.320-0500] {processor.py:175} INFO - Processing /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.152 seconds
+[2022-12-29T22:51:45.697-0500] {processor.py:153} INFO - Started process (PID=7251) to work on /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2022-12-29T22:51:45.699-0500] {processor.py:743} INFO - Processing file /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2022-12-29T22:51:45.700-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:45.700-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2022-12-29T22:51:45.732-0500] {processor.py:753} INFO - DAG(s) dict_keys(['example_trigger_target_dag']) retrieved from /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2022-12-29T22:51:45.754-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:45.753-0500] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-29T22:51:45.769-0500] {logging_mixin.py:137} INFO - [2022-12-29T22:51:45.769-0500] {dag.py:3427} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2022-12-29T22:51:45.783-0500] {processor.py:175} INFO - Processing /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.091 seconds
