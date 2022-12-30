@@ -563,3 +563,462 @@ airflow.exceptions.AirflowException: The key 'Extract & Transform Data' has to b
 [2022-12-30T09:11:21.086-0500] {logging_mixin.py:137} INFO - [2022-12-30T09:11:21.086-0500] {dag.py:2676} INFO - Sync 1 DAGs
 [2022-12-30T09:11:21.102-0500] {logging_mixin.py:137} INFO - [2022-12-30T09:11:21.101-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
 [2022-12-30T09:11:21.114-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.081 seconds
+[2022-12-30T17:16:48.669-0500] {processor.py:153} INFO - Started process (PID=20061) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:16:48.670-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:16:48.671-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:16:48.671-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:16:48.683-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:16:48.681-0500] {dagbag.py:343} ERROR - Failed to import: /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py", line 18, in <module>
+    schedule_interval='@daily')
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dag.py", line 464, in __init__
+    if start_date and start_date.tzinfo:
+AttributeError: 'datetime.date' object has no attribute 'tzinfo'
+[2022-12-30T17:16:48.683-0500] {processor.py:755} WARNING - No viable dags retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:16:48.694-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.027 seconds
+[2022-12-30T17:17:19.073-0500] {processor.py:153} INFO - Started process (PID=20104) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:17:19.077-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:17:19.078-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:17:19.078-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:17:19.096-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:17:19.093-0500] {dagbag.py:343} ERROR - Failed to import: /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py", line 18, in <module>
+    schedule_interval='@daily')
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dag.py", line 464, in __init__
+    if start_date and start_date.tzinfo:
+AttributeError: 'datetime.date' object has no attribute 'tzinfo'
+[2022-12-30T17:17:19.097-0500] {processor.py:755} WARNING - No viable dags retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:17:19.112-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.043 seconds
+[2022-12-30T17:17:49.653-0500] {processor.py:153} INFO - Started process (PID=20152) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:17:49.654-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:17:49.654-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:17:49.654-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:17:49.664-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:17:49.663-0500] {dagbag.py:343} ERROR - Failed to import: /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py", line 18, in <module>
+    schedule_interval='@daily')
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dag.py", line 464, in __init__
+    if start_date and start_date.tzinfo:
+AttributeError: 'datetime.date' object has no attribute 'tzinfo'
+[2022-12-30T17:17:49.664-0500] {processor.py:755} WARNING - No viable dags retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:17:49.675-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.024 seconds
+[2022-12-30T17:18:20.240-0500] {processor.py:153} INFO - Started process (PID=20184) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:18:20.242-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:18:20.243-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:18:20.243-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:18:20.262-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:18:20.260-0500] {dagbag.py:343} ERROR - Failed to import: /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py", line 18, in <module>
+    schedule_interval='@daily')
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dag.py", line 464, in __init__
+    if start_date and start_date.tzinfo:
+AttributeError: 'datetime.date' object has no attribute 'tzinfo'
+[2022-12-30T17:18:20.263-0500] {processor.py:755} WARNING - No viable dags retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:18:20.277-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.041 seconds
+[2022-12-30T17:18:50.444-0500] {processor.py:153} INFO - Started process (PID=20212) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:18:50.446-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:18:50.447-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:18:50.447-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:18:50.464-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:18:50.462-0500] {dagbag.py:343} ERROR - Failed to import: /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py", line 18, in <module>
+    schedule_interval='@daily')
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/dag.py", line 464, in __init__
+    if start_date and start_date.tzinfo:
+AttributeError: 'datetime.date' object has no attribute 'tzinfo'
+[2022-12-30T17:18:50.465-0500] {processor.py:755} WARNING - No viable dags retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:18:50.481-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.043 seconds
+[2022-12-30T17:19:08.715-0500] {processor.py:153} INFO - Started process (PID=20242) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:19:08.716-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:19:08.717-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:19:08.717-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:19:08.737-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:19:08.822-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:19:08.822-0500] {manager.py:504} INFO - Created Permission View: can delete on DAG:test_dag
+[2022-12-30T17:19:08.827-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:19:08.827-0500] {manager.py:504} INFO - Created Permission View: can read on DAG:test_dag
+[2022-12-30T17:19:08.831-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:19:08.831-0500] {manager.py:504} INFO - Created Permission View: can edit on DAG:test_dag
+[2022-12-30T17:19:08.831-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:19:08.831-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:19:08.841-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:19:08.841-0500] {dag.py:2697} INFO - Creating ORM DAG for test_dag
+[2022-12-30T17:19:08.849-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:19:08.848-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:19:08.851-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:19:08.851-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:19:08.863-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.150 seconds
+[2022-12-30T17:19:38.948-0500] {processor.py:153} INFO - Started process (PID=20247) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:19:38.949-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:19:38.950-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:19:38.950-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:19:38.970-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:19:38.992-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:19:38.992-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:19:39.009-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:19:39.008-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:19:39.011-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:19:39.011-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:19:39.026-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.082 seconds
+[2022-12-30T17:20:09.080-0500] {processor.py:153} INFO - Started process (PID=20254) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:20:09.082-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:20:09.083-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:20:09.083-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:20:09.109-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:20:09.131-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:20:09.131-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:20:09.146-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:20:09.146-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:20:09.149-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:20:09.149-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:20:09.159-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.084 seconds
+[2022-12-30T17:20:39.353-0500] {processor.py:153} INFO - Started process (PID=20301) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:20:39.355-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:20:39.356-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:20:39.356-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:20:39.379-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:20:39.401-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:20:39.400-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:20:39.417-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:20:39.416-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:20:39.419-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:20:39.419-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:20:39.430-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.081 seconds
+[2022-12-30T17:21:09.671-0500] {processor.py:153} INFO - Started process (PID=20315) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:21:09.673-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:21:09.674-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:21:09.674-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:21:09.699-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:21:09.720-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:21:09.720-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:21:09.736-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:21:09.736-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:21:09.738-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:21:09.738-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:21:09.749-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.083 seconds
+[2022-12-30T17:21:39.920-0500] {processor.py:153} INFO - Started process (PID=20332) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:21:39.922-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:21:39.923-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:21:39.923-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:21:39.947-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:21:39.969-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:21:39.969-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:21:39.985-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:21:39.985-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:21:39.987-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:21:39.987-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:21:39.999-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.084 seconds
+[2022-12-30T17:22:10.226-0500] {processor.py:153} INFO - Started process (PID=20350) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:22:10.228-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:22:10.229-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:22:10.229-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:22:10.254-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:22:10.276-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:22:10.275-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:22:10.292-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:22:10.291-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:22:10.294-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:22:10.294-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:22:10.306-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.084 seconds
+[2022-12-30T17:22:40.545-0500] {processor.py:153} INFO - Started process (PID=20367) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:22:40.547-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:22:40.548-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:22:40.548-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:22:40.571-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:22:40.592-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:22:40.591-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:22:40.608-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:22:40.607-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:22:40.610-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:22:40.610-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:22:40.621-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.081 seconds
+[2022-12-30T17:23:10.861-0500] {processor.py:153} INFO - Started process (PID=20383) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:23:10.863-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:23:10.865-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:23:10.864-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:23:10.890-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:23:10.911-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:23:10.911-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:23:10.928-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:23:10.928-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:23:10.935-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:23:10.934-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:23:10.946-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.089 seconds
+[2022-12-30T17:23:41.277-0500] {processor.py:153} INFO - Started process (PID=20421) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:23:41.279-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:23:41.280-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:23:41.280-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:23:41.308-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:23:41.335-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:23:41.335-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:23:41.354-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:23:41.354-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:23:41.357-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:23:41.357-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:23:41.368-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.095 seconds
+[2022-12-30T17:24:11.706-0500] {processor.py:153} INFO - Started process (PID=20438) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:24:11.707-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:24:11.709-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:24:11.709-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:24:11.735-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:24:11.759-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:24:11.759-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:24:11.775-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:24:11.775-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:24:11.778-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:24:11.777-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:24:11.789-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.089 seconds
+[2022-12-30T17:24:42.129-0500] {processor.py:153} INFO - Started process (PID=20458) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:24:42.131-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:24:42.132-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:24:42.132-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:24:42.161-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:24:42.225-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:24:42.224-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:24:42.240-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:24:42.240-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:24:42.243-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:24:42.243-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:24:42.258-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.134 seconds
+[2022-12-30T17:24:55.522-0500] {processor.py:153} INFO - Started process (PID=20480) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:24:55.522-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:24:55.523-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:24:55.523-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:24:55.536-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:24:55.553-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:24:55.553-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:24:55.570-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:24:55.569-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:24:55.572-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:24:55.572-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:24:55.583-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.063 seconds
+[2022-12-30T17:25:25.677-0500] {processor.py:153} INFO - Started process (PID=20492) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:25:25.679-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:25:25.680-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:25:25.679-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:25:25.699-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:25:25.720-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:25:25.720-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:25:25.736-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:25:25.735-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:25:25.738-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:25:25.738-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:25:25.749-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.075 seconds
+[2022-12-30T17:25:55.978-0500] {processor.py:153} INFO - Started process (PID=20512) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:25:55.980-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:25:55.981-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:25:55.981-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:25:56.005-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:25:56.028-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:25:56.027-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:25:56.043-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:25:56.043-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:25:56.046-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:25:56.046-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:25:56.057-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.083 seconds
+[2022-12-30T17:26:26.290-0500] {processor.py:153} INFO - Started process (PID=20532) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:26:26.292-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:26:26.294-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:26:26.293-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:26:26.316-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:26:26.338-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:26:26.338-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:26:26.354-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:26:26.354-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:26:26.356-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:26:26.356-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:26:26.367-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.082 seconds
+[2022-12-30T17:26:56.609-0500] {processor.py:153} INFO - Started process (PID=20573) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:26:56.610-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:26:56.612-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:26:56.611-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:26:56.636-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:26:56.659-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:26:56.658-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:26:56.674-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:26:56.674-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:26:56.677-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:26:56.676-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:26:56.688-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.084 seconds
+[2022-12-30T17:27:26.909-0500] {processor.py:153} INFO - Started process (PID=20996) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:27:26.911-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:27:26.912-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:27:26.911-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:27:26.934-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:27:26.958-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:27:26.958-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:27:26.974-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:27:26.974-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:27:26.977-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:27:26.976-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:27:26.988-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.084 seconds
+[2022-12-30T17:27:57.205-0500] {processor.py:153} INFO - Started process (PID=21010) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:27:57.206-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:27:57.208-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:27:57.207-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:27:57.231-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:27:57.253-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:27:57.252-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:27:57.269-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:27:57.269-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:27:57.272-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:27:57.272-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:27:57.284-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.083 seconds
+[2022-12-30T17:28:27.512-0500] {processor.py:153} INFO - Started process (PID=21027) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:28:27.513-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:28:27.515-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:28:27.514-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:28:27.538-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:28:27.561-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:28:27.561-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:28:27.577-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:28:27.577-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:28:27.580-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:28:27.579-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:28:27.591-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.084 seconds
+[2022-12-30T17:28:57.665-0500] {processor.py:153} INFO - Started process (PID=21050) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:28:57.667-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:28:57.668-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:28:57.668-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:28:57.701-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:28:57.751-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:28:57.750-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:28:57.766-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:28:57.766-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:28:57.769-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:28:57.768-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:28:57.781-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.121 seconds
+[2022-12-30T17:29:28.009-0500] {processor.py:153} INFO - Started process (PID=21483) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:29:28.011-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:29:28.013-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:29:28.012-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:29:28.039-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:29:28.062-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:29:28.062-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:29:28.078-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:29:28.078-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:29:28.081-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:29:28.080-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:29:28.091-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.087 seconds
+[2022-12-30T17:29:58.311-0500] {processor.py:153} INFO - Started process (PID=21514) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:29:58.314-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:29:58.316-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:29:58.315-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:29:58.344-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:29:58.367-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:29:58.367-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:29:58.383-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:29:58.382-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:29:58.385-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:29:58.385-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:29:58.396-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.090 seconds
+[2022-12-30T17:30:28.716-0500] {processor.py:153} INFO - Started process (PID=21548) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:30:28.717-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:30:28.718-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:30:28.718-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:30:28.741-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:30:28.763-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:30:28.763-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:30:28.780-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:30:28.780-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:30:28.783-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:30:28.782-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:30:28.795-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.083 seconds
+[2022-12-30T17:30:33.449-0500] {processor.py:153} INFO - Started process (PID=21557) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:30:33.450-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:30:33.451-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:30:33.451-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:30:33.465-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:30:33.484-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:30:33.483-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:30:33.500-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:30:33.499-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:30:33.502-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:30:33.502-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:30:33.514-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.067 seconds
+[2022-12-30T17:31:03.581-0500] {processor.py:153} INFO - Started process (PID=21578) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:31:03.583-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:31:03.584-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:31:03.584-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:31:03.602-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:31:03.624-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:31:03.624-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:31:03.640-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:31:03.640-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:31:03.642-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:31:03.642-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:31:03.653-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.075 seconds
+[2022-12-30T17:31:33.915-0500] {processor.py:153} INFO - Started process (PID=21598) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:31:33.917-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:31:33.918-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:31:33.918-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:31:33.941-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:31:33.963-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:31:33.963-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:31:33.978-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:31:33.978-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:31:33.981-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:31:33.981-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:31:33.992-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.081 seconds
+[2022-12-30T17:32:04.242-0500] {processor.py:153} INFO - Started process (PID=21614) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:32:04.243-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:32:04.245-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:32:04.244-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:32:04.269-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:32:04.290-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:32:04.290-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:32:04.306-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:32:04.305-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:32:04.308-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:32:04.308-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:32:04.319-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.082 seconds
+[2022-12-30T17:32:34.566-0500] {processor.py:153} INFO - Started process (PID=21628) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:32:34.567-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:32:34.569-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:32:34.568-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:32:34.593-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:32:34.614-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:32:34.614-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:32:34.630-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:32:34.630-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:32:34.632-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:32:34.632-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:32:34.644-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.083 seconds
+[2022-12-30T17:33:04.859-0500] {processor.py:153} INFO - Started process (PID=21669) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:33:04.861-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:33:04.862-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:33:04.862-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:33:04.886-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:33:04.907-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:33:04.907-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:33:04.922-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:33:04.922-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:33:04.925-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:33:04.925-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:33:04.936-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.081 seconds
+[2022-12-30T17:33:35.170-0500] {processor.py:153} INFO - Started process (PID=21684) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:33:35.172-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:33:35.173-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:33:35.173-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:33:35.199-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:33:35.220-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:33:35.220-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:33:35.236-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:33:35.236-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:33:35.239-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:33:35.239-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:33:35.250-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.085 seconds
+[2022-12-30T17:34:05.481-0500] {processor.py:153} INFO - Started process (PID=21700) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:34:05.482-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:34:05.484-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:34:05.483-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:34:05.507-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:34:05.529-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:34:05.529-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:34:05.545-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:34:05.545-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:34:05.548-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:34:05.547-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:34:05.559-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.083 seconds
+[2022-12-30T17:34:35.658-0500] {processor.py:153} INFO - Started process (PID=21715) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:34:35.660-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:34:35.661-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:34:35.661-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:34:35.683-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:34:35.704-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:34:35.704-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:34:35.720-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:34:35.720-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:34:35.723-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:34:35.722-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:34:35.734-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.080 seconds
+[2022-12-30T17:35:05.797-0500] {processor.py:153} INFO - Started process (PID=21732) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:35:05.799-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:35:05.801-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:35:05.800-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:35:05.824-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:35:05.846-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:35:05.846-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:35:05.862-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:35:05.862-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:35:05.865-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:35:05.865-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:35:05.876-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.083 seconds
+[2022-12-30T17:35:35.930-0500] {processor.py:153} INFO - Started process (PID=21746) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:35:35.932-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:35:35.933-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:35:35.933-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:35:35.957-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:35:35.979-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:35:35.979-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:35:35.995-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:35:35.994-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:35:35.997-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:35:35.997-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:35:36.008-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.083 seconds
+[2022-12-30T17:36:06.078-0500] {processor.py:153} INFO - Started process (PID=21781) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:36:06.080-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:36:06.081-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:36:06.081-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:36:06.105-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:36:06.126-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:36:06.126-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:36:06.142-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:36:06.142-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:36:06.144-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:36:06.144-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:36:06.156-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.082 seconds
+[2022-12-30T17:36:36.244-0500] {processor.py:153} INFO - Started process (PID=21795) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:36:36.245-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:36:36.247-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:36:36.246-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:36:36.270-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:36:36.292-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:36:36.291-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:36:36.307-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:36:36.307-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:36:36.310-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:36:36.309-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:36:36.321-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.082 seconds
+[2022-12-30T17:37:06.413-0500] {processor.py:153} INFO - Started process (PID=21811) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:37:06.414-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:37:06.416-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:37:06.415-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:37:06.440-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:37:06.462-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:37:06.462-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:37:06.478-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:37:06.477-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:37:06.480-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:37:06.480-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:37:06.492-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.084 seconds
+[2022-12-30T17:37:36.588-0500] {processor.py:153} INFO - Started process (PID=21825) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:37:36.590-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:37:36.591-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:37:36.591-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:37:36.614-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:37:36.636-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:37:36.636-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:37:36.652-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:37:36.651-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:37:36.654-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:37:36.654-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:37:36.666-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.083 seconds
+[2022-12-30T17:38:06.750-0500] {processor.py:153} INFO - Started process (PID=21840) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:38:06.751-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:38:06.753-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:38:06.752-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:38:06.775-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:38:06.797-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:38:06.797-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:38:06.812-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:38:06.812-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:38:06.815-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:38:06.815-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:38:06.827-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.082 seconds
+[2022-12-30T17:38:37.296-0500] {processor.py:153} INFO - Started process (PID=21855) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:38:37.298-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:38:37.299-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:38:37.299-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:38:37.322-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:38:37.344-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:38:37.344-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:38:37.360-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:38:37.360-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:38:37.363-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:38:37.363-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:38:37.374-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.082 seconds
+[2022-12-30T17:39:07.634-0500] {processor.py:153} INFO - Started process (PID=21890) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:39:07.636-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:39:07.637-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:39:07.637-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:39:07.660-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:39:07.681-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:39:07.681-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:39:07.697-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:39:07.697-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:39:07.700-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:39:07.699-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:39:07.711-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.082 seconds
+[2022-12-30T17:39:37.981-0500] {processor.py:153} INFO - Started process (PID=21904) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:39:37.982-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:39:37.984-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:39:37.983-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:39:38.007-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:39:38.029-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:39:38.029-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:39:38.045-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:39:38.045-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:39:38.047-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:39:38.047-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:39:38.059-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.083 seconds
+[2022-12-30T17:40:08.328-0500] {processor.py:153} INFO - Started process (PID=21922) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:40:08.329-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:40:08.331-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:40:08.330-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:40:08.354-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:40:08.376-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:40:08.376-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:40:08.393-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:40:08.392-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:40:08.395-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:40:08.395-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:40:08.406-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.084 seconds
+[2022-12-30T17:40:38.667-0500] {processor.py:153} INFO - Started process (PID=21937) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:40:38.669-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:40:38.671-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:40:38.671-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:40:38.697-0500] {processor.py:753} INFO - DAG(s) dict_keys(['test_dag', 'realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:40:38.719-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:40:38.719-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:40:38.735-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:40:38.735-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:40:38.738-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:40:38.738-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:40:38.749-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.086 seconds
+[2022-12-30T17:41:08.979-0500] {processor.py:153} INFO - Started process (PID=21981) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:41:08.980-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:41:08.983-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:41:08.982-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:41:09.012-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl', 'test_dag']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:41:09.038-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:41:09.038-0500] {dag.py:2676} INFO - Sync 2 DAGs
+[2022-12-30T17:41:09.055-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:41:09.055-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:41:09.058-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:41:09.057-0500] {dag.py:3427} INFO - Setting next_dagrun for test_dag to 2022-12-30T00:00:00+00:00, run_after=2022-12-31T00:00:00+00:00
+[2022-12-30T17:41:09.071-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.096 seconds
+[2022-12-30T17:41:39.251-0500] {processor.py:153} INFO - Started process (PID=22032) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:41:39.252-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-30T17:41:39.254-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:41:39.253-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:41:39.277-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-30T17:41:39.296-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:41:39.296-0500] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-30T17:41:39.312-0500] {logging_mixin.py:137} INFO - [2022-12-30T17:41:39.312-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-01-01T00:00:00+00:00, run_after=2022-01-02T00:00:00+00:00
+[2022-12-30T17:41:39.327-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.080 seconds
