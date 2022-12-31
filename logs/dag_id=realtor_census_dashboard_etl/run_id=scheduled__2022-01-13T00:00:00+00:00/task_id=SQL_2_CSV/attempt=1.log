@@ -1,0 +1,2 @@
+[2022-12-30T20:49:09.125-0500] {taskinstance.py:1081} INFO - Dependencies not met for <TaskInstance: realtor_census_dashboard_etl.SQL_2_CSV scheduled__2022-01-13T00:00:00+00:00 [queued]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=1, upstream_failed=0, removed=0, done=1), upstream_task_ids={'Extract_n_Transform_Data'}
+[2022-12-30T20:49:09.128-0500] {local_task_job.py:98} INFO - Task is not able to be run
