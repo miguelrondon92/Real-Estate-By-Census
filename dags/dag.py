@@ -9,6 +9,19 @@ etl_dag= DAG(dag_id= "realtor_census_dashboard_etl",
 
 part_1 = BashOperator(
     task_id= "Extract_n_Transform_Data",
-    bash_command= 'jupyter nbconvert --execute tranform_dfs.ipynb',
+    bash_command= 'python3 transform_dfs.py',
     dag=etl_dag
 )
+
+part_2 = BashOperator(
+    task_id= "SQL_2_CSV",
+    bash_command= 'sh sql2csv.sh',
+    dag=etl_dag
+)
+
+part_3 = BashOperator(
+    task_id= "Run_Shiny_App",
+    bash_command="sh ui/run_app.sh"
+)
+
+part_1 >> part_2 >> part_3 
