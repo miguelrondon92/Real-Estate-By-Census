@@ -677,3 +677,192 @@ jinja2.exceptions.TemplateNotFound: sh ui/run_app.sh
 [2022-12-30T20:52:20.819-0500] {logging_mixin.py:137} INFO - [2022-12-30T20:52:20.818-0500] {dag.py:2676} INFO - Sync 1 DAGs
 [2022-12-30T20:52:20.837-0500] {logging_mixin.py:137} INFO - [2022-12-30T20:52:20.836-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-03-17T00:00:00+00:00, run_after=2022-03-18T00:00:00+00:00
 [2022-12-30T20:52:20.850-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.069 seconds
+[2022-12-31T09:34:21.717-0500] {processor.py:153} INFO - Started process (PID=27467) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:34:21.731-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-31T09:34:21.732-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:34:21.732-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:34:21.752-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:34:21.750-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh sql2csv.sh
+[2022-12-31T09:34:21.752-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:34:21.752-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh ui/run_app.sh
+[2022-12-31T09:34:21.760-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:34:21.805-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:34:21.805-0500] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-31T09:34:21.878-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:34:21.877-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-03-18T00:00:00+00:00, run_after=2022-03-19T00:00:00+00:00
+[2022-12-31T09:34:21.891-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.176 seconds
+[2022-12-31T09:34:52.310-0500] {processor.py:153} INFO - Started process (PID=27611) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:34:52.312-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-31T09:34:52.313-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:34:52.313-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:34:52.337-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:34:52.336-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh sql2csv.sh
+[2022-12-31T09:34:52.338-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:34:52.338-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh ui/run_app.sh
+[2022-12-31T09:34:52.345-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:34:52.364-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:34:52.363-0500] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-31T09:34:52.380-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:34:52.380-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-03-31T00:00:00+00:00, run_after=2022-04-01T00:00:00+00:00
+[2022-12-31T09:34:52.447-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.142 seconds
+[2022-12-31T09:35:22.776-0500] {processor.py:153} INFO - Started process (PID=27712) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:35:22.777-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-31T09:35:22.778-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:35:22.777-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:35:22.790-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:35:22.789-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh sql2csv.sh
+[2022-12-31T09:35:22.791-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:35:22.790-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh ui/run_app.sh
+[2022-12-31T09:35:22.795-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:35:22.815-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:35:22.815-0500] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-31T09:35:22.889-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:35:22.888-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-04-13T00:00:00+00:00, run_after=2022-04-14T00:00:00+00:00
+[2022-12-31T09:35:22.900-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.127 seconds
+[2022-12-31T09:35:53.888-0500] {processor.py:153} INFO - Started process (PID=27800) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:35:53.891-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-31T09:35:53.892-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:35:53.892-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:35:53.913-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:35:53.912-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh sql2csv.sh
+[2022-12-31T09:35:53.914-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:35:53.914-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh ui/run_app.sh
+[2022-12-31T09:35:53.920-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:35:53.941-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:35:53.941-0500] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-31T09:35:54.013-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:35:54.013-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-04-27T00:00:00+00:00, run_after=2022-04-28T00:00:00+00:00
+[2022-12-31T09:35:54.025-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.142 seconds
+[2022-12-31T09:36:24.563-0500] {processor.py:153} INFO - Started process (PID=27900) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:36:24.565-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-31T09:36:24.566-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:36:24.566-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:36:24.579-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:36:24.578-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh sql2csv.sh
+[2022-12-31T09:36:24.579-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:36:24.579-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh ui/run_app.sh
+[2022-12-31T09:36:24.584-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:36:24.606-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:36:24.606-0500] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-31T09:36:24.690-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:36:24.690-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-05-12T00:00:00+00:00, run_after=2022-05-13T00:00:00+00:00
+[2022-12-31T09:36:24.702-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.141 seconds
+[2022-12-31T09:36:56.141-0500] {processor.py:153} INFO - Started process (PID=27988) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:36:56.142-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-31T09:36:56.143-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:36:56.143-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:36:56.154-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:36:56.154-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh sql2csv.sh
+[2022-12-31T09:36:56.155-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:36:56.155-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh ui/run_app.sh
+[2022-12-31T09:36:56.159-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:36:56.178-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:36:56.177-0500] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-31T09:36:56.248-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:36:56.247-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-05-26T00:00:00+00:00, run_after=2022-05-27T00:00:00+00:00
+[2022-12-31T09:36:56.259-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.120 seconds
+[2022-12-31T09:37:27.547-0500] {processor.py:153} INFO - Started process (PID=28090) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:37:27.548-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-31T09:37:27.549-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:37:27.549-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:37:27.561-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:37:27.560-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh sql2csv.sh
+[2022-12-31T09:37:27.562-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:37:27.561-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh ui/run_app.sh
+[2022-12-31T09:37:27.566-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:37:27.585-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:37:27.585-0500] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-31T09:37:27.655-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:37:27.655-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-06-09T00:00:00+00:00, run_after=2022-06-10T00:00:00+00:00
+[2022-12-31T09:37:27.673-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.128 seconds
+[2022-12-31T09:37:59.007-0500] {processor.py:153} INFO - Started process (PID=28209) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:37:59.008-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-31T09:37:59.009-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:37:59.009-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:37:59.021-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:37:59.020-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh sql2csv.sh
+[2022-12-31T09:37:59.022-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:37:59.022-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh ui/run_app.sh
+[2022-12-31T09:37:59.026-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:37:59.103-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:37:59.102-0500] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-31T09:37:59.119-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:37:59.119-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-12-31T09:37:59.130-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.125 seconds
+[2022-12-31T09:38:29.888-0500] {processor.py:153} INFO - Started process (PID=28313) to work on /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:38:29.891-0500] {processor.py:743} INFO - Processing file /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py for tasks to queue
+[2022-12-31T09:38:29.892-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:38:29.892-0500] {dagbag.py:538} INFO - Filling up the DagBag from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:38:29.912-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:38:29.911-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh sql2csv.sh
+[2022-12-31T09:38:29.913-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:38:29.912-0500] {abstractoperator.py:183} ERROR - Failed to resolve template field 'bash_command'
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 181, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jinja2/loaders.py", line 218, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sh ui/run_app.sh
+[2022-12-31T09:38:29.919-0500] {processor.py:753} INFO - DAG(s) dict_keys(['realtor_census_dashboard_etl']) retrieved from /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py
+[2022-12-31T09:38:29.999-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:38:29.999-0500] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-31T09:38:30.013-0500] {logging_mixin.py:137} INFO - [2022-12-31T09:38:30.013-0500] {dag.py:3427} INFO - Setting next_dagrun for realtor_census_dashboard_etl to 2022-07-07T00:00:00+00:00, run_after=2022-07-08T00:00:00+00:00
+[2022-12-31T09:38:30.025-0500] {processor.py:175} INFO - Processing /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py took 0.141 seconds

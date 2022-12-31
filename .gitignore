@@ -2,4 +2,6 @@ __pycache__
 cen_api.py
 postgres_credentials.py
 analytical_files
+logs
+airflow-webserver.pd
 .DS_Store
