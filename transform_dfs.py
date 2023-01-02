@@ -13,13 +13,10 @@ from census_api import census_df
 from scrape_realtor import realtor_df
 
 
-# In[2]:
 
 
-state_abrevs=pd.read_json('state_abrev.json', dtype="str")
+state_abrevs = pd.read_json('state_abrev.json', dtype="str")
 
-
-# In[3]:
 
 
 if len(realtor_df["month_date_yyyymm"].unique()) == 1: 
@@ -93,3 +90,4 @@ realtor_df.to_sql("county_prices", engine, if_exists='replace')
 #Does not refresh data once created. Data remains the same over time. 
 census_df.to_sql("census_demographics", engine, if_exists='replace') 
 
+print("Program ran succesfully")
