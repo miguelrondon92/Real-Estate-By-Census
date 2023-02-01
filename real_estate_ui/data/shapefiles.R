@@ -1,16 +1,12 @@
-
-knitr::opts_chunk$set(echo = TRUE)
-
 library(tidyverse)
 library(urbnmapr)
 library(maps)
 library(sf)
-setwd('~/Desktop/CODE/Data Projects/Real-Estate-By-Census/')
-
+library(rgdal)
 print("Starting... ")
 
 
-rcdf <- read.csv("analytical_files/realtor_census.csv") %>% 
+rcdf <- read.csv("data/realtor_census.csv") %>% 
   select(2,4,19, 18, 5:17, 23:32) %>% 
   filter(!is.na(total_hispanic_or_latino))
 
@@ -23,7 +19,7 @@ rcdf2 <- rcdf %>%
          total_pop_american_indigenous_perc = total_population_of_one_race_american_indian_and_alaska_native_ / total_pop,
          total_pop_asian_perc = total_population_of_one_race_asian_alone / total_pop, 
          total_pop_pacific_islander_perc = 
-           total_population_of_one_race_native_hawaiian_and_other_pacific_ / total_pop,
+         total_population_of_one_race_native_hawaiian_and_other_pacific_ / total_pop,
          total_pop_other_perc = total_population_of_one_race_some_other_race_alone / total_pop, 
          total_pop_mixed_races_perc = total_population_of_two_or_more_races / total_pop,
          total_pop_hispanic_perc = total_hispanic_or_latino / total_pop,

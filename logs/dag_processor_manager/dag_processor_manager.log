@@ -6425,3 +6425,18 @@ File Path                                                                       
 --------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
 /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.21s           2023-01-02T20:44:59
 ================================================================================
+[2023-01-02T15:55:58.072-0500] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2023-01-02T15:56:14.544-0500] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2023-01-02T15:56:14.545-0500] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2023-01-02T15:56:14.545-0500] {manager.py:486} INFO - Checking for new files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags every 300 seconds
+[2023-01-02T15:56:14.545-0500] {manager.py:726} INFO - Searching for files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2023-01-02T15:56:14.546-0500] {manager.py:729} INFO - There are 1 files in /Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags
+[2023-01-02T15:56:44.219-0500] {manager.py:851} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/miguelrondon/Desktop/CODE/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.11s           2023-01-02T20:56:15
+================================================================================
+[2023-01-02T17:52:46.461-0500] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
