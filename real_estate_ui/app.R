@@ -35,21 +35,22 @@ ui <- fluidPage(
                       ),
             sliderInput("median_listing_price",
                         "Median Listing Price:",
-                        min = min(main_df$median_listing_price, na.rm = TRUE),
-                        max = max(main_df$median_listing_price, na.rm = TRUE),
-                        value = c(min(main_df$median_listing_price, na.rm = TRUE), max(main_df$median_listing_price, na.rm = TRUE))
+                        min = 10000,
+                        max = 1000000,
+                        value = c(10000, 1000000),
+                        step = 50000
                         ),
             sliderInput("median_sq_ft",
                         "Median Square Feet",
                         min= min(main_df$median_square_feet, na.rm = TRUE),
-                        max= max(main_df$median_square_feet, na.rm  = TRUE),
-                        value= c(min(main_df$median_square_feet, na.rm = TRUE), max(main_df$median_square_feet, na.rm  = TRUE))
+                        max= 3000,
+                        value= c(0, max(main_df$median_square_feet, na.rm  = TRUE))
                         ),
             sliderInput("active_listings",
                         "Number of Active Listings",
-                        min = min(rcdf$active_listing_count, na.rm = TRUE),
-                        max = max(main_df$active_listing_count, na.rm = TRUE),
-                        value= c(min(rcdf$active_listing_count, na.rm = TRUE), max(main_df$active_listing_count, na.rm = TRUE))
+                        min = 0,
+                        max = 3000,
+                        value= c(0, 3000)
                         ),
             checkboxGroupInput("county_pop_size",
                                "County Size by Population",
@@ -111,8 +112,8 @@ server <- function(input, output) {
                       bringToFront = TRUE),
                     label = sprintf(
                       "<strong>%s, %s</strong>
-  <br/> Median Listing Price of Homes: %g
-  <br/> Median Square Feet of Homes: %g
+  <br/> Median Listing Price: %g
+  <br/> Median Square Feet: %g
   <br/> Active Listing Count: %g
   <br/> County Population (in the hundreds): %g
   <br/> Largest Racial Group: %s",

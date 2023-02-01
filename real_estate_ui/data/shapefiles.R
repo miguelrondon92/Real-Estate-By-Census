@@ -14,7 +14,7 @@ rcdf$county_fips <- as.character(rcdf$county_fips)
 
 rcdf2 <- rcdf %>% 
   mutate(total_pop = total,
-         total_pop_white_perc = total_population_of_one_race_white_alone / total_pop,
+         total_pop_white_perc = round(total_population_of_one_race_white_alone / total_pop),
          total_pop_black_perc = total_population_of_one_race_black_or_african_american_alone / total_pop,
          total_pop_american_indigenous_perc = total_population_of_one_race_american_indian_and_alaska_native_ / total_pop,
          total_pop_asian_perc = total_population_of_one_race_asian_alone / total_pop, 
@@ -28,6 +28,9 @@ rcdf2 <- rcdf %>%
                                      total_pop < 1000000 ~ "Mid Metro", 
                                      total_pop >= 1000000 ~ "Large Metro"
          ),
+         median_listing_price = if_else(median_listing_price > 1000000, 1000000, as.double(median_listing_price)),
+         median_square_feet = if_else(median_square_feet > 3000, 3000, as.double(median_square_feet)),
+         active_listing_count  = if_else(active_listing_count > 3000, 3000, as.double(active_listing_count)),
          county_pop_size = factor(county_pop_size, levels = c("Non Metro", "Small Metro", "Mid Metro", "Large Metro", NA)),
          county_pop_size = addNA(county_pop_size),
          most_pop_perc = pmax(total_pop_white_perc, total_pop_black_perc, total_pop_american_indigenous_perc,
