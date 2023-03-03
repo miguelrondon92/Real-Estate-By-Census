@@ -1,2 +1,4 @@
-data
-rsconnect
+data/
+rsconnect/
+hidden.r
+deploy.r

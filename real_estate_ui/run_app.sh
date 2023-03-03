@@ -1,1 +1,1 @@
-R -e "shiny::runApp('ui/app.r', port = 3838)"
+R -e "shiny::runApp('real_estate_ui/app.r', port = 3838)"

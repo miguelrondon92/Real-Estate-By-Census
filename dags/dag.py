@@ -3,14 +3,14 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta, date
 
-path = "/Users/miguelrondon/Desktop/CODE/Data\ Projects/Real-Estate-By-Census/"
+path = "/Users/miguelrondon/Desktop/CODE/data\ projects/Real-Estate-By-Census/"
 
 default_args = {
     'owner': 'admin',
     'depends_on_past': False,
     'email_on_failure': False,
     'email_on_retry': False,
-    'schedule_interval': '@daily',
+    'schedule_interval': '@monthly',
     'retries': 1,
     'retry_delay': timedelta(seconds=5),
 }
@@ -48,7 +48,7 @@ part_2 = BashOperator(
 
 part_3 = BashOperator(
     task_id= "Run_Shiny_App",
-    bash_command=f'cd {path} && sh ui/run_app.sh '
+    bash_command=f'cd {path} && sh real_estate_ui/run_app.sh '
 )
 
-check_path >> part_1 >> check_path2 >> part_2 >> part_3 
+check_path >> part_1 >> check_path2 >> part_2

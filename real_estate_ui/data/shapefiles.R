@@ -4,7 +4,7 @@ library(maps)
 library(sf)
 library(rgdal)
 print("Starting... ")
-
+#setwd('~/Desktop/code/Data Projects/Real-Estate-By-Census/real_estate_ui/')
 
 rcdf <- read.csv("data/realtor_census.csv") %>% 
   select(2,4,19, 18, 5:17, 23:32) %>% 
