@@ -1,6 +1,11 @@
+import os
+from pathlib import Path
+
+import pandas as pd
 import requests
-import cen_api 
-import pandas as pd 
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).parent / ".env")
 
 #variables are from https://api.census.gov/data/2020/dec/pl/variables.html
 variables = "NAME,P1_001N,P1_002N,P1_003N,P1_004N,P1_005N,P1_006N,P1_007N,P1_008N,P1_009N,P2_002N"
@@ -9,13 +14,10 @@ def import_census_data(variables):
     host= "https://api.census.gov/data/"
     year= "2020"
     dataset_acronym= "/dec/pl" #specifically decennial data 
-    g= "?get="
     location= "&for=county:*" #specifically county data... 
-    key_pref= "&key="
-    key= cen_api.API_KEY
-    query_url= f"{host}{year}{dataset_acronym}{g}{variables}{location}{key_pref}{key}"
+    key= os.environ["API_KEY"]
+    query_url= f"{host}{year}{dataset_acronym}?get={variables}{location}&key={key}"
     r = requests.get(query_url).json()
-    #return [x[0:len(variables.split(","))] for x in r]
     return r
 
 
@@ -40,10 +42,9 @@ def create_df():
     census_df = pd.concat([new_cols, census_df], axis=1)
     return(census_df)
 
-#print(get_vars_list(variables))
-census_df = create_df()
-#print(import_census_data(variables))
-#print(create_df())
 
+if __name__ == "__main__":
+    census_df = create_df()
+    print(census_df.head())
 
 
