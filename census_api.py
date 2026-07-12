@@ -42,10 +42,9 @@ def create_df():
     census_df = pd.concat([new_cols, census_df], axis=1)
     return(census_df)
 
-#print(get_vars_list(variables))
-census_df = create_df()
-#print(import_census_data(variables))
-#print(create_df())
 
+if __name__ == "__main__":
+    census_df = create_df()
+    print(census_df.head())
 
 
