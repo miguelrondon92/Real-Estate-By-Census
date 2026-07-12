@@ -7,3 +7,4 @@ airflow-webserver.pd
 airflow.cfg
 airflow*
 .env
+**/.Rhistory
