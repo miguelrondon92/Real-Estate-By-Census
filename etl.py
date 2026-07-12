@@ -1,11 +1,13 @@
-
+import os
 import pandas as pd
 import numpy as np
 from census_api import create_df as create_census_df
 from scrape_realtor import main as scrape_realtor_main
 from sqlalchemy import create_engine 
 from sqlalchemy_utils import database_exists, create_database
-from postgres_credentials import alchemycred
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).parent / ".env")
 
 def main()
     census_df = create_census_df()
@@ -73,7 +75,7 @@ def save_to_database(realtor_df, census_df):
     """
     Save the realtor and census dataframes to the database.
     """
-    engine= create_engine(alchemycred)
+    engine= create_engine(os.environ["alchemycred"])
     if not database_exists(engine.url):
         create_database(engine.url)
 
