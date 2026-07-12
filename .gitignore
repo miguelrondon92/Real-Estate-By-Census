@@ -1,7 +1,7 @@
 __pycache__
 postgres_credentials.py
 analytical_files
-logs
+logs/*
 airflow-webserver.pd
 .DS_Store
 airflow.cfg
