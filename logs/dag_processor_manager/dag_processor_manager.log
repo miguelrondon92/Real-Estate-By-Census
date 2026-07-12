@@ -4655,3 +4655,4 @@ File Path                                                                       
 /Users/miguelrondon/Desktop/code/Data Projects/Real-Estate-By-Census/dags/dag.py                           1           0  0.11s           2023-03-03T01:50:18
 ================================================================================
 [2023-03-02T20:50:59.489-0500] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2023-03-31T09:09:49.490-0400] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
