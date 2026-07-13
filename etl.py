@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 load_dotenv(Path(__file__).parent / ".env")
 
-def main()
+def main():
     census_df = create_census_df()
     realtor_df = scrape_realtor_main()
     state_abrevs=pd.read_json('state_abrev.json', dtype="str")

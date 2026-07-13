@@ -1,0 +1,6 @@
+real_estate:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /dbt/real_estate.duckdb
