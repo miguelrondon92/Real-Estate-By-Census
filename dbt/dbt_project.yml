@@ -1,0 +1,8 @@
+name: real_estate
+version: "1.0"
+config-version: 2
+
+profile: real_estate
+
+model-paths:
+  - models
