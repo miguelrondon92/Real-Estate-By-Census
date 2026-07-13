@@ -1,22 +1,25 @@
 import os
+import io
 import pandas as pd
 import numpy as np
 from census_api import create_df as create_census_df
 from scrape_realtor import main as scrape_realtor_main
-from sqlalchemy import create_engine 
-from sqlalchemy_utils import database_exists, create_database
+from pathlib import Path
 from dotenv import load_dotenv
+from minio import Minio
+# from sqlalchemy import create_engine
+# from sqlalchemy_utils import database_exists, create_database
 
 load_dotenv(Path(__file__).parent / ".env")
 
 def main():
+    state_abrevs=pd.read_json('state_abrev.json', dtype="str")
     census_df = create_census_df()
     realtor_df = scrape_realtor_main()
-    state_abrevs=pd.read_json('state_abrev.json', dtype="str")
     realtor_df = process_realtor_df(realtor_df, state_abrevs)
     census_df = process_census_df(census_df)
-    save_to_database(realtor_df, census_df)
-    print("Data saved to database!")
+    # save_to_database(realtor_df, census_df) # no longer using a database/warehouse for storage
+    save_to_minio(realtor_df, census_df)
 
 def process_realtor_df(realtor_df, state_abrevs):
     """
@@ -82,6 +85,45 @@ def save_to_database(realtor_df, census_df):
     realtor_df.to_sql("county_prices", engine, if_exists='replace') 
     census_df.to_sql("census_demographics", engine, if_exists='replace') 
 
+def save_to_minio(realtor_df, census_df):
+    """
+    Save raw realtor and census dataframes to MinIO.
+    """
 
+    client = Minio(
+        "localhost:9000",
+        access_key="minioadmin",
+        secret_key="minioadmin",
+        secure=False
+    )
+
+    bucket = "real-estate-by-census"
+
+    # Create bucket if it doesn't exist
+    if not client.bucket_exists(bucket):
+        client.make_bucket(bucket)
+
+    datasets = {
+        "raw/realtor/realtor.parquet": realtor_df,
+        "raw/census/census.parquet": census_df
+    }
+
+    for object_name, df in datasets.items():
+
+        buffer = io.BytesIO()
+
+        df.to_parquet(buffer, index=False)
+
+        buffer.seek(0)
+
+        client.put_object(
+            bucket_name=bucket,
+            object_name=object_name,
+            data=buffer,
+            length=buffer.getbuffer().nbytes,
+            content_type="application/octet-stream"
+        )
+
+        print(f"Uploaded {object_name}")
 if __name__ == "__main__":
     main()

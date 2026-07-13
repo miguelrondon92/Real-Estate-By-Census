@@ -1,5 +1,4 @@
 import pandas as pd
-from scrapy import Selector
 import requests
 
 URL = "https://www.realtor.com/research/data/"
@@ -26,24 +25,15 @@ SCHEMA = {
 NO_SCRAPE_LINK = "https://econdata.s3-us-west-2.amazonaws.com/Reports/Core/RDC_Inventory_Core_Metrics_County.csv"
 
 def main(): 
+    print("getting realtor data")
     df_keys = SCHEMA.keys()
-
-    #get csv file from website
-    sel = Selector(text=HTML)
-    links = sel.XPATH(XPATH).extract()
-    #ingest data into pandas DF
-    try:
-        realtor_df = pd.read_csv(
-            links[0], dtype=SCHEMA, usecols=list(df_keys))
-    except:
-        print("Oops.. something went wrong with scraping. Likely, site is forbidden. using alternative to scraping...")
-        realtor_df = pd.read_csv(NO_SCRAPE_LINK, dtype= SCHEMA, usecols=list(df_keys))
-
+    realtor_df = pd.read_csv(NO_SCRAPE_LINK, dtype= SCHEMA, usecols=list[str](df_keys))
     realtor_df = realtor_df[:-1]
     new_cols= realtor_df['county_name'].str.split(",",expand=True)
     new_cols.columns= ['County', 'State']
     realtor_df = realtor_df.drop(labels= 'county_name', axis=1)
     realtor_df = pd.concat([new_cols, realtor_df], axis= 1)
+    print("done with realtor data")
     return realtor_df
 
 if __name__ == "__main__":
