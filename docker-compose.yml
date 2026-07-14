@@ -5,7 +5,6 @@ services:
   minio:
     image: quay.io/minio/minio
     container_name: minio
-
     ports:
       - "9000:9000"
       - "9001:9001"
@@ -16,6 +15,45 @@ services:
       - minio_data:/data
     command:
       server /data --console-address ":9001"
+
+
+  postgres:
+    image: postgres:16
+    container_name: airflow-postgres
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - airflow_db:/var/lib/postgresql/data
+
+
+  airflow:
+    build:
+      context: .
+      dockerfile: docker/airflow/Dockerfile
+    env_file:
+      - .env
+    container_name: airflow
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      PYTHONPATH: /opt/airflow/etl
+      _AIRFLOW_WWW_USER_USERNAME: admin
+      _AIRFLOW_WWW_USER_PASSWORD: admin
+      _AIRFLOW_WWW_USER_EMAIL: admin@example.com
+      _AIRFLOW_WWW_USER_FIRSTNAME: Admin
+      _AIRFLOW_WWW_USER_LASTNAME: User
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./etl:/opt/airflow/etl
+      - ./dbt:/opt/airflow/dbt
+    command: standalone
 
 
   dbt:
@@ -38,3 +76,4 @@ services:
 
 volumes:
   minio_data:
+  airflow_db:
