@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw
+    tables:
+
+      - name: census
+        meta:
+          external_location: "s3://real-estate-by-census/raw/census/census.parquet"
+
+      - name: realtor
+        meta:
+          external_location: "s3://real-estate-by-census/raw/realtor/realtor.parquet"

@@ -2,5 +2,8 @@ requests
 python-dotenv
 beautifulsoup4
 pandas
+geopandas
+folium
+streamlit_folium
 minio
 pyarrow
