@@ -62,6 +62,9 @@ services:
       dockerfile: docker/dbt/Dockerfile
     depends_on:
       - minio
+    volumes:
+      - ./dbt:/dbt
+    working_dir: /dbt
 
 
   streamlit:
@@ -70,6 +73,9 @@ services:
       dockerfile: docker/streamlit/Dockerfile
     ports:
       - "8501:8501"
+    volumes:
+    - ./streamlit:/app
+    - ./data:/app/data
     depends_on:
       - minio
 

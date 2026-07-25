@@ -7,4 +7,7 @@ airflow-webserver.pd
 airflow.cfg
 airflow*
 .env
-**/.Rhistory
+**/.Rhistory.venv/
+.venv/
+dbt/target/*
+dbt/logs/*

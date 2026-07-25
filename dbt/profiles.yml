@@ -1,6 +1,17 @@
 real_estate:
   target: dev
+
   outputs:
     dev:
       type: duckdb
-      path: /dbt/real_estate.duckdb
+      path: /dbt/warehouse.duckdb
+
+      extensions:
+        - httpfs
+
+      settings:
+        s3_endpoint: minio:9000
+        s3_access_key_id: minioadmin
+        s3_secret_access_key: minioadmin
+        s3_use_ssl: false
+        s3_url_style: path
