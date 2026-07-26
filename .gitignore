@@ -4,6 +4,7 @@ analytical_files
 logs/*
 airflow-webserver.pd
 .DS_Store
+**/.DS_Store
 airflow.cfg
 airflow*
 .env
