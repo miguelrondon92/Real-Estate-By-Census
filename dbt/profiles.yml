@@ -4,7 +4,9 @@ real_estate:
   outputs:
     dev:
       type: duckdb
-      path: /dbt/warehouse.duckdb
+      # Relative to the dbt project cwd so both the dbt service (/dbt)
+      # and Airflow (/opt/airflow/dbt) resolve the same warehouse file.
+      path: warehouse.duckdb
 
       extensions:
         - httpfs
