@@ -12,3 +12,4 @@ airflow*
 .venv/
 dbt/target/*
 dbt/logs/*
+*.duckdb
