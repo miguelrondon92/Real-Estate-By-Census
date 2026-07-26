@@ -9,6 +9,15 @@ Airflow, Python, MinIO, Parquet, dbt, DuckDB, Streamlit, and Folium. It separate
 data ingestion, object storage, transformation, and presentation so each layer can
 be developed and operated independently.
 
+## End result
+
+A Streamlit dashboard with filterable county-level housing and demographic metrics
+on an interactive Folium map:
+
+<p align="center">
+  <img src="./images/dashboard_sc1.png" alt="Streamlit county dashboard" width="100%" />
+</p>
+
 ## Architecture
 
 ### Orchestration
