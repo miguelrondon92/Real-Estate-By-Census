@@ -11,27 +11,40 @@ be developed and operated independently.
 
 ## Architecture
 
+### Orchestration
+
+Airflow schedules the daily pipeline and tracks source freshness:
+
 ```mermaid
 flowchart LR
-    A[Realtor.com research page] -->|update text| D[Apache Airflow]
-    B[Realtor.com Research CSV] --> E[Python ETL]
-    C[2020 Decennial Census API] --> E
-    D -->|run ETL| E
-    E -->|raw Census and Realtor Parquet| F[(MinIO data lake)]
-    D -->|run dbt| H[dbt + DuckDB]
-    F -->|read raw Parquet with httpfs| H
-    H -->|write analytics Parquet| F
-
-    K[Census county shapefile] --> L[GeoPandas boundary build]
-    L -->|write counties.parquet| G[(Local GeoParquet)]
-    L -.->|upload reference copy| F
-
-    F -->|read analytics Parquet with DuckDB| I[Streamlit]
-    G -->|read county geometries| I
-    I --> J[Interactive Folium map]
+    A[Realtor.com research page] -->|update text| B[check_realtor_update]
+    B --> C[run_etl]
+    C --> D[run_dbt]
+    D --> E[run_streamlit]
 ```
 
 ### Data flow
+
+Sources move through extract, lake storage, transform, and the map app:
+
+```mermaid
+flowchart LR
+    A[Realtor.com Research CSV] --> E[Python ETL]
+    B[2020 Decennial Census API] --> E
+    E -->|raw Parquet| F[(MinIO data lake)]
+    F -->|read with httpfs| H[dbt + DuckDB]
+    H -->|analytics Parquet| F
+
+    K[Census county shapefile] --> L[GeoPandas boundary build]
+    L -->|counties.parquet| G[(Local GeoParquet)]
+    L -.->|reference copy| F
+
+    F -->|analytics Parquet| I[Streamlit + DuckDB]
+    G -->|county geometries| I
+    I --> J[Interactive Folium map]
+```
+
+### Pipeline steps
 
 1. **Extract** — Python retrieves the latest county inventory file published by
    Realtor.com Research and county demographic fields from the 2020 Decennial
@@ -237,6 +250,11 @@ Current improvement opportunities include:
 - add health checks, structured logging, alerting, and retry policies; and
 - add CI for Python quality checks, dbt compilation, and automated tests.
 
+In terms of improving data availability, future iterations of this project can provide: 
+- historical data 
+- entity level profiles (county profile, state profile, city profile, etc.)
+- demographic breakdowns. 
+ 
 ## Responsible use
 
 Demographic and housing data can reveal structural disparities, but they should not
