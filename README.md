@@ -13,17 +13,22 @@ be developed and operated independently.
 
 ```mermaid
 flowchart LR
-    A[Realtor.com Research CSV] --> E[Python ETL]
-    B[2020 Decennial Census API] --> E
-    C[Census county boundaries] --> G[GeoParquet reference data]
-    D[Apache Airflow] -->|orchestrates| E
-    E -->|raw Parquet| F[(MinIO data lake)]
-    F --> H[dbt + DuckDB]
-    H -->|analytics Parquet| F
-    F --> I[Streamlit + DuckDB]
-    G --> I
+    A[Realtor.com research page] -->|update text| D[Apache Airflow]
+    B[Realtor.com Research CSV] --> E[Python ETL]
+    C[2020 Decennial Census API] --> E
+    D -->|run ETL| E
+    E -->|raw Census and Realtor Parquet| F[(MinIO data lake)]
+    D -->|run dbt| H[dbt + DuckDB]
+    F -->|read raw Parquet with httpfs| H
+    H -->|write analytics Parquet| F
+
+    K[Census county shapefile] --> L[GeoPandas boundary build]
+    L -->|write counties.parquet| G[(Local GeoParquet)]
+    L -.->|upload reference copy| F
+
+    F -->|read analytics Parquet with DuckDB| I[Streamlit]
+    G -->|read county geometries| I
     I --> J[Interactive Folium map]
-    K[(PostgreSQL)] -->|metadata database| D
 ```
 
 ### Data flow
@@ -56,9 +61,6 @@ The first task compares the update text on Realtor.com's research page with the
 value retained in Airflow Variables. The following tasks invoke the Python ETL and
 dbt transformation layers. `catchup=False` prevents historical backfills when the
 local platform starts.
-
-PostgreSQL is used only as Airflow's metadata database; analytical data remains in
-MinIO and DuckDB.
 
 ### ETL — Python and pandas
 
@@ -134,7 +136,6 @@ how local housing-market conditions vary across communities.
 | Object storage | MinIO | S3-compatible raw, reference, and analytics zones |
 | Transformation | dbt-duckdb, SQL | Staging models, joins, derived metrics, lineage |
 | Query engine | DuckDB | In-process analytics over Parquet and S3 |
-| Metadata | PostgreSQL 16 | Airflow metadata persistence |
 | Geospatial processing | GeoPandas, GeoParquet | County geometry preparation and joins |
 | Data application | Streamlit, Folium | Interactive filtering and county map |
 | Runtime | Docker Compose | Reproducible local services and networking |
