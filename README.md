@@ -143,7 +143,7 @@ object storage.
 dbt tests cover:
 
 - **schema** — `not_null` / `unique` on FIPS and core measure columns in sources and models;
-- **relationships** — `stg_realtor.county_fips` → `stg_census.county_fips` (warn severity for known CT planning-region mismatches - need to put this edgecase into roadmap);
+- **relationships** — `stg_realtor.county_fips` → `stg_census.county_fips` (warn severity for known Connecticut planning-region FIPS that do not exist in Census);
 - **accepted values** — U.S. state names and `county_pop_size` buckets; and
 - **source freshness** — Realtor extracts warn after 45 days and error after 90 days, using `month_date_yyyymm` as `loaded_at`.
 
@@ -169,10 +169,11 @@ how local housing-market conditions vary across communities.
 | Orchestration | Apache Airflow 2.9 | Daily task dependencies and run history |
 | Extraction and loading | Python, pandas, requests, MinIO SDK | API/CSV ingestion, validation, normalization, Parquet loading |
 | Object storage | MinIO | S3-compatible raw, reference, and analytics zones |
-| Transformation | dbt-duckdb, SQL | Staging models, joins, derived metrics, lineage |
+| Transformation | dbt-duckdb, SQL | Staging models, joins, derived metrics, lineage, and data tests |
 | Query engine | DuckDB | In-process analytics over Parquet and S3 |
 | Geospatial processing | GeoPandas, GeoParquet | County geometry preparation and joins |
 | Data application | Streamlit, Folium | Interactive filtering and county map |
+| Testing | pytest, GitHub Actions | FIPS/MinIO unit tests; MinIO integration tests in CI |
 | Runtime | Docker Compose | Reproducible local services and networking |
 
 ## Data sources
@@ -188,15 +189,22 @@ how local housing-market conditions vary across communities.
 
 ```text
 .
+├── .github/workflows/            # CI (pytest unit + MinIO integration)
 ├── airflow/dags/                 # Airflow pipeline definitions
 ├── data/                         # County source geometry and GeoParquet
 ├── dbt/
-│   ├── models/staging/           # Source-aligned dbt views
-│   └── models/marts/             # Joined analytics mart
+│   ├── models/staging/           # Source-aligned dbt views + schema tests
+│   ├── models/marts/             # Joined analytics mart + schema tests
+│   └── models/sources.yml        # Source definitions, freshness, and tests
 ├── docker/                       # Service-specific container images
 ├── etl/                          # Extraction, normalization, and MinIO loading
 ├── streamlit/                    # Interactive geospatial application
-└── docker-compose.yml            # Local platform definition
+├── tests/
+│   ├── unit/                     # FIPS normalization + mocked MinIO I/O
+│   └── integration/              # Live MinIO Parquet round-trip
+├── docker-compose.yml            # Local platform definition
+├── pytest.ini                    # pytest paths and markers
+└── requirements.txt              # Python deps (runtime + pytest)
 ```
 
 ## Run locally
@@ -234,9 +242,32 @@ The data layers can also be run independently:
 # Populate the raw zone after MinIO is running
 docker compose run --rm airflow python /opt/airflow/etl/etl.py
 
-# Build the staging models and analytics mart
-docker compose run --rm dbt dbt run
+# Build models and run dbt data tests
+docker compose run --rm dbt dbt build --profiles-dir /dbt
+
+# Optional: check Realtor source freshness independently
+docker compose run --rm dbt dbt source freshness --profiles-dir /dbt
 ```
+
+### Tests
+
+Python tests cover FIPS normalization and MinIO Parquet I/O:
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+# Unit tests (no Docker required)
+pytest -m "not integration"
+
+# Integration tests (Parquet round-trip against Compose MinIO)
+docker compose up -d minio
+pytest -m integration
+```
+
+GitHub Actions (`.github/workflows/ci.yml`) runs the unit suite on every push/PR
+and the MinIO integration suite against an ephemeral MinIO container.
 
 The repository includes generated county GeoParquet for the application. To rebuild
 it from the source shapefile, install the Python dependencies and run:
@@ -257,21 +288,27 @@ python etl/build_county_shapes.py
   executes analytics, dbt manages transformations, and Streamlit serves users.
 - **Containerized development:** Service dependencies and ports are encoded in
   Docker Compose for repeatable local setup.
+- **Short-circuit orchestration:** Unchanged Realtor update text skips ETL/dbt so
+  daily runs stay cheap when the source has not moved.
+- **Tested critical paths:** pytest covers FIPS padding and MinIO upload/download;
+  dbt covers schema, relationships, accepted values, and source freshness.
 
 ## Current scope and roadmap
 
 This repository is a local data-platform implementation and portfolio project.
 Current improvement opportunities include:
 
-- add unit and integration tests around FIPS normalization and MinIO I/O;
-- add health checks, structured logging, alerting, and retry policies; and
-- add CI for Python quality checks, dbt compilation, and automated tests.
+- add health checks, structured logging, alerting, and retry policies;
+- add CI for dbt compilation and broader Python quality checks (lint/type); and
+- resolve Connecticut planning-region FIPS in Realtor data that do not map to
+  Census county geographies (today the dbt relationship test warns on these rows).
 
-In terms of improving data availability, future iterations of this project can provide: 
-- historical data 
-- entity level profiles (county profile, state profile, city profile, etc.)
-- demographic breakdowns. 
-- CT planning-region FIPS in realtor data does not map to census data, research options + identify fix.
+In terms of improving data availability, future iterations of this project can
+provide:
+
+- historical data;
+- entity-level profiles (county, state, city, etc.); and
+- demographic breakdowns.
  
 ## Responsible use
 
