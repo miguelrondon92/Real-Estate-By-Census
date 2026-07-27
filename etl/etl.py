@@ -2,8 +2,6 @@ import io
 import os
 import pandas as pd
 import numpy as np
-from census_api import create_df as create_census_df
-from scrape_realtor import main as scrape_realtor_main
 from pathlib import Path
 from dotenv import load_dotenv
 from minio import Minio
@@ -13,6 +11,9 @@ from minio import Minio
 load_dotenv(Path(__file__).parent.parent / ".env")
 
 def main():
+    from census_api import create_df as create_census_df
+    from scrape_realtor import main as scrape_realtor_main
+
     state_abrevs=pd.read_json('etl/state_abrev.json', dtype="str")
     census_df = create_census_df()
     realtor_df = scrape_realtor_main()
@@ -20,6 +21,11 @@ def main():
     census_df = process_census_df(census_df)
     # save_to_database(realtor_df, census_df) # no longer using a database/warehouse for storage
     save_to_minio(realtor_df, census_df)
+
+def normalize_county_fips(series: pd.Series) -> pd.Series:
+    """Pad county FIPS codes to five characters (e.g. 6037 -> 06037)."""
+    return series.astype(str).str.zfill(5)
+
 
 def process_realtor_df(realtor_df, state_abrevs):
     """
@@ -34,8 +40,7 @@ def process_realtor_df(realtor_df, state_abrevs):
         realtor_df["state"] = realtor_df["State_y"]
         realtor_df = realtor_df.drop(['State_x', 'State_y', 'Abbrev'], axis=1)
         realtor_df.columns = realtor_df.columns.str.lower()
-        realtor_df['county_fips'] = np.where(
-            realtor_df['county_fips'].str.split("").str.len() == 6, '0' + realtor_df['county_fips'], realtor_df['county_fips'])
+        realtor_df["county_fips"] = normalize_county_fips(realtor_df["county_fips"])
         #as_of_month_year = realtor_df["month_date_yyyymm"][0]
     else: 
         raise Exception("the realtor dataframe has more than one date in it, it should only have one date. Please review...") 
@@ -96,14 +101,17 @@ def get_minio_client():
         secure=False,
     )
 
-def save_to_minio(realtor_df, census_df):
+def save_to_minio(
+    realtor_df,
+    census_df,
+    client=None,
+    bucket="real-estate-by-census",
+):
     """
     Save raw realtor and census dataframes to MinIO.
     """
 
-    client = get_minio_client()
-
-    bucket = "real-estate-by-census"
+    client = client or get_minio_client()
 
     # Create bucket if it doesn't exist
     if not client.bucket_exists(bucket):
