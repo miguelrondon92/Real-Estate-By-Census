@@ -27,9 +27,10 @@ Airflow schedules the daily pipeline and tracks source freshness:
 ```mermaid
 flowchart LR
     A[Realtor.com research page] -->|update text| B[check_realtor_update]
-    B --> C[run_etl]
+    B -->|changed| C[run_etl]
+    B -->|unchanged| X[skip downstream]
     C --> D[run_dbt]
-    D --> E[run_streamlit]
+    D --> E[commit_realtor_update]
 ```
 
 ### Data flow
@@ -76,13 +77,15 @@ flowchart LR
 The `realtor_pipeline` DAG models a daily workflow:
 
 ```text
-check_realtor_update → run_etl → run_dbt
+check_realtor_update → run_etl → run_dbt → commit_realtor_update
 ```
 
-The first task compares the update text on Realtor.com's research page with the
-value retained in Airflow Variables. The following tasks invoke the Python ETL and
-dbt transformation layers. `catchup=False` prevents historical backfills when the
-local platform starts.
+`check_realtor_update` is a `ShortCircuitOperator`: it compares the update text on
+Realtor.com's research page with the value retained in Airflow Variables. If the
+text is unchanged, Airflow skips ETL and dbt. On a change, the new text is held in
+XCom until `commit_realtor_update` runs after a successful dbt run, so a failed
+pipeline does not permanently mark the source as processed. `catchup=False`
+prevents historical backfills when the local platform starts.
 
 ### ETL — Python and pandas
 
@@ -250,10 +253,6 @@ python etl/build_county_shapes.py
 This repository is a local data-platform implementation and portfolio project.
 Current improvement opportunities include:
 
-- package `dbt-duckdb` in the Airflow runtime, or invoke the dedicated dbt service,
-  so the DAG's `run_dbt` task executes in a fully isolated deployment;
-- convert the Realtor update check to a short-circuit or branching task so unchanged
-  source data can skip downstream processing;
 - add dbt schema, relationship, accepted-value, and source-freshness tests;
 - add unit and integration tests around FIPS normalization and MinIO I/O;
 - add health checks, structured logging, alerting, and retry policies; and

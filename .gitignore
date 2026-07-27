@@ -7,6 +7,9 @@ airflow-webserver.pd
 **/.DS_Store
 airflow.cfg
 airflow*
+!airflow/
+!airflow/dags/
+!airflow/dags/**
 .env
 **/.Rhistory.venv/
 .venv/
