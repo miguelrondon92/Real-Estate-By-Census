@@ -1,0 +1,161 @@
+version: 2
+
+models:
+  - name: stg_census
+    description: Staged Census demographics with typed population fields and county_fips.
+    columns:
+      - name: county_fips
+        description: Five-character county FIPS key shared with Realtor staging.
+        tests:
+          - not_null
+          - unique
+      - name: county
+        tests:
+          - not_null
+      - name: state
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Alabama
+                  - Alaska
+                  - Arizona
+                  - Arkansas
+                  - California
+                  - Colorado
+                  - Connecticut
+                  - Delaware
+                  - District of Columbia
+                  - Florida
+                  - Georgia
+                  - Hawaii
+                  - Idaho
+                  - Illinois
+                  - Indiana
+                  - Iowa
+                  - Kansas
+                  - Kentucky
+                  - Louisiana
+                  - Maine
+                  - Maryland
+                  - Massachusetts
+                  - Michigan
+                  - Minnesota
+                  - Mississippi
+                  - Missouri
+                  - Montana
+                  - Nebraska
+                  - Nevada
+                  - New Hampshire
+                  - New Jersey
+                  - New Mexico
+                  - New York
+                  - North Carolina
+                  - North Dakota
+                  - Ohio
+                  - Oklahoma
+                  - Oregon
+                  - Pennsylvania
+                  - Puerto Rico
+                  - Rhode Island
+                  - South Carolina
+                  - South Dakota
+                  - Tennessee
+                  - Texas
+                  - Utah
+                  - Vermont
+                  - Virginia
+                  - Washington
+                  - West Virginia
+                  - Wisconsin
+                  - Wyoming
+      - name: total_pop
+        description: Total county population.
+        tests:
+          - not_null
+
+  - name: stg_realtor
+    description: Staged Realtor.com county inventory metrics for a single reporting month.
+    columns:
+      - name: county_fips
+        description: Five-character county FIPS key shared with Census staging.
+        tests:
+          - not_null
+          - unique
+          # A few Realtor rows use CT planning-region FIPS that Census does not have.
+          - relationships:
+              arguments:
+                to: ref('stg_census')
+                field: county_fips
+              config:
+                severity: warn
+      - name: county
+        tests:
+          - not_null
+      - name: state
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Alabama
+                  - Alaska
+                  - Arizona
+                  - Arkansas
+                  - California
+                  - Colorado
+                  - Connecticut
+                  - Delaware
+                  - District of Columbia
+                  - Florida
+                  - Georgia
+                  - Hawaii
+                  - Idaho
+                  - Illinois
+                  - Indiana
+                  - Iowa
+                  - Kansas
+                  - Kentucky
+                  - Louisiana
+                  - Maine
+                  - Maryland
+                  - Massachusetts
+                  - Michigan
+                  - Minnesota
+                  - Mississippi
+                  - Missouri
+                  - Montana
+                  - Nebraska
+                  - Nevada
+                  - New Hampshire
+                  - New Jersey
+                  - New Mexico
+                  - New York
+                  - North Carolina
+                  - North Dakota
+                  - Ohio
+                  - Oklahoma
+                  - Oregon
+                  - Pennsylvania
+                  - Rhode Island
+                  - South Carolina
+                  - South Dakota
+                  - Tennessee
+                  - Texas
+                  - Utah
+                  - Vermont
+                  - Virginia
+                  - Washington
+                  - West Virginia
+                  - Wisconsin
+                  - Wyoming
+      - name: month_date_yyyymm
+        tests:
+          - not_null
+      - name: median_listing_price
+        tests:
+          - not_null
+      - name: active_listing_count
+        tests:
+          - not_null

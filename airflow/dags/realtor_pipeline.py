@@ -47,9 +47,9 @@ def run_etl():
     result.check_returncode()
 
 
-def run_dbt():
+def _run_dbt_command(args):
     result = subprocess.run(
-        ["dbt", "run", "--profiles-dir", "/opt/airflow/dbt"],
+        args,
         cwd="/opt/airflow/dbt",
         capture_output=True,
         text=True,
@@ -62,6 +62,14 @@ def run_dbt():
     print(result.stderr)
 
     result.check_returncode()
+
+
+def run_dbt():
+    profiles = ["--profiles-dir", "/opt/airflow/dbt"]
+    # build = run models + schema/relationship/accepted_values tests
+    _run_dbt_command(["dbt", "build", *profiles])
+    # source freshness is a separate command from generic tests
+    _run_dbt_command(["dbt", "source", "freshness", *profiles])
 
 
 with DAG(

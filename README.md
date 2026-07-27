@@ -83,9 +83,10 @@ check_realtor_update → run_etl → run_dbt → commit_realtor_update
 `check_realtor_update` is a `ShortCircuitOperator`: it compares the update text on
 Realtor.com's research page with the value retained in Airflow Variables. If the
 text is unchanged, Airflow skips ETL and dbt. On a change, the new text is held in
-XCom until `commit_realtor_update` runs after a successful dbt run, so a failed
-pipeline does not permanently mark the source as processed. `catchup=False`
-prevents historical backfills when the local platform starts.
+XCom until `commit_realtor_update` runs after a successful dbt build and source
+freshness check, so a failed pipeline does not permanently mark the source as
+processed. `catchup=False` prevents historical backfills when the local platform
+starts.
 
 ### ETL — Python and pandas
 
@@ -138,6 +139,15 @@ The final external mart is materialized back to MinIO as Parquet. It includes:
 DuckDB acts as an embedded analytical engine rather than a long-running database,
 keeping the platform lightweight while still supporting SQL transformations over
 object storage.
+
+dbt tests cover:
+
+- **schema** — `not_null` / `unique` on FIPS and core measure columns in sources and models;
+- **relationships** — `stg_realtor.county_fips` → `stg_census.county_fips` (warn severity for known CT planning-region mismatches - need to put this edgecase into roadmap);
+- **accepted values** — U.S. state names and `county_pop_size` buckets; and
+- **source freshness** — Realtor extracts warn after 45 days and error after 90 days, using `month_date_yyyymm` as `loaded_at`.
+
+The Airflow `run_dbt` task runs `dbt build` then `dbt source freshness`.
 
 ### Presentation — Streamlit and Folium
 
@@ -253,7 +263,6 @@ python etl/build_county_shapes.py
 This repository is a local data-platform implementation and portfolio project.
 Current improvement opportunities include:
 
-- add dbt schema, relationship, accepted-value, and source-freshness tests;
 - add unit and integration tests around FIPS normalization and MinIO I/O;
 - add health checks, structured logging, alerting, and retry policies; and
 - add CI for Python quality checks, dbt compilation, and automated tests.
@@ -262,6 +271,7 @@ In terms of improving data availability, future iterations of this project can p
 - historical data 
 - entity level profiles (county profile, state profile, city profile, etc.)
 - demographic breakdowns. 
+- CT planning-region FIPS in realtor data does not map to census data, research options + identify fix.
  
 ## Responsible use
 

@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: realtor_county_metrics
+    description: >
+      County-level mart joining Realtor inventory with Census demographics,
+      including derived race/ethnicity shares and metro-size buckets.
+    columns:
+      - name: county_fips
+        description: Realtor county FIPS (join key to Census).
+        tests:
+          - not_null
+      - name: county
+        tests:
+          - not_null
+      - name: state
+        tests:
+          - not_null
+      - name: month_date_yyyymm
+        tests:
+          - not_null
+      - name: median_listing_price
+        tests:
+          - not_null
+      - name: county_pop_size
+        description: Population size bucket derived from total_pop.
+        tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - Non Metro
+                  - Small Metro
+                  - Mid Metro
+                  - Large Metro
+              # Left-joined Census can leave total_pop null for unmatched FIPS.
+              config:
+                where: "total_pop is not null"
+      - name: white_pct
+        description: Share of population identifying as White alone.
+      - name: black_pct
+        description: Share of population identifying as Black or African American alone.
+      - name: asian_pct
+        description: Share of population identifying as Asian alone.
+      - name: hispanic_pct
+        description: Share of population identifying as Hispanic or Latino.
+      - name: median_listing_price_clean
+        description: median_listing_price capped at 1,000,000 for visualization.
+      - name: median_square_feet_clean
+        description: median_square_feet capped at 3,000 for visualization.
+      - name: active_listing_count_clean
+        description: active_listing_count capped at 3,000 for visualization.

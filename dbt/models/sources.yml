@@ -2,12 +2,60 @@ version: 2
 
 sources:
   - name: raw
+    description: Raw Parquet extracts in MinIO produced by the Python ETL.
+    # Monthly Realtor extracts; Census is a static decennial snapshot.
+    freshness:
+      warn_after: {count: 45, period: day}
+      error_after: {count: 90, period: day}
     tables:
-
       - name: census
+        description: County-level 2020 Decennial Census demographics.
         meta:
           external_location: "s3://real-estate-by-census/raw/census/census.parquet"
+        # Static reference data — do not fail the pipeline on age.
+        freshness: null
+        columns:
+          - name: fips
+            description: Five-character county FIPS (state + county).
+            tests:
+              - not_null
+              - unique
+          - name: county
+            tests:
+              - not_null
+          - name: state
+            tests:
+              - not_null
+          - name: total
+            description: Total population.
+            tests:
+              - not_null
 
       - name: realtor
+        description: County-level Realtor.com research inventory metrics (single month).
         meta:
           external_location: "s3://real-estate-by-census/raw/realtor/realtor.parquet"
+        # month_date_yyyymm is YYYYMM; treat the first of that month as loaded_at.
+        loaded_at_field: "strptime(cast(month_date_yyyymm as varchar) || '01', '%Y%m%d')"
+        columns:
+          - name: county_fips
+            description: Five-character county FIPS.
+            tests:
+              - not_null
+              - unique
+          - name: county
+            tests:
+              - not_null
+          - name: state
+            tests:
+              - not_null
+          - name: month_date_yyyymm
+            description: Reporting month as YYYYMM.
+            tests:
+              - not_null
+          - name: median_listing_price
+            tests:
+              - not_null
+          - name: active_listing_count
+            tests:
+              - not_null
