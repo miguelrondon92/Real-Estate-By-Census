@@ -5,7 +5,6 @@ import pytest
 
 from etl import save_to_minio
 
-
 pytestmark = pytest.mark.integration
 
 

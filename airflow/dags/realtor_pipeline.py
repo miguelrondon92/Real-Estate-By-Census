@@ -1,8 +1,10 @@
-from airflow import DAG
-from airflow.operators.python import PythonOperator, ShortCircuitOperator
-from datetime import datetime
-from airflow.models import Variable
 import subprocess
+from datetime import datetime
+
+from airflow import DAG
+from airflow.models import Variable
+from airflow.operators.python import PythonOperator, ShortCircuitOperator
+
 from realtor_checker import get_realtor_update_text
 
 

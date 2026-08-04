@@ -173,7 +173,7 @@ how local housing-market conditions vary across communities.
 | Query engine | DuckDB | In-process analytics over Parquet and S3 |
 | Geospatial processing | GeoPandas, GeoParquet | County geometry preparation and joins |
 | Data application | Streamlit, Folium | Interactive filtering and county map |
-| Testing | pytest, GitHub Actions | FIPS/MinIO unit tests; MinIO integration tests in CI |
+| Testing | pytest, Ruff, GitHub Actions | Unit/integration tests; format + lint in CI |
 | Runtime | Docker Compose | Reproducible local services and networking |
 
 ## Data sources
@@ -189,7 +189,7 @@ how local housing-market conditions vary across communities.
 
 ```text
 .
-├── .github/workflows/            # CI (pytest unit + MinIO integration)
+├── .github/workflows/            # CI (Ruff + pytest unit + MinIO integration)
 ├── airflow/dags/                 # Airflow pipeline definitions
 ├── data/                         # County source geometry and GeoParquet
 ├── dbt/
@@ -204,7 +204,8 @@ how local housing-market conditions vary across communities.
 │   └── integration/              # Live MinIO Parquet round-trip
 ├── docker-compose.yml            # Local platform definition
 ├── pytest.ini                    # pytest paths and markers
-└── requirements.txt              # Python deps (runtime + pytest)
+├── pyproject.toml                # Ruff lint/format config
+└── requirements.txt              # Python deps (runtime + pytest + ruff)
 ```
 
 ## Run locally
@@ -266,8 +267,15 @@ docker compose up -d minio
 pytest -m integration
 ```
 
-GitHub Actions (`.github/workflows/ci.yml`) runs the unit suite on every push/PR
+GitHub Actions (`.github/workflows/ci.yml`) runs Ruff format/lint, the unit suite,
 and the MinIO integration suite against an ephemeral MinIO container.
+
+Local linting:
+
+```bash
+ruff format etl tests airflow/dags streamlit
+ruff check etl tests airflow/dags streamlit
+```
 
 The repository includes generated county GeoParquet for the application. To rebuild
 it from the source shapefile, install the Python dependencies and run:
@@ -299,7 +307,7 @@ This repository is a local data-platform implementation and portfolio project.
 Current improvement opportunities include:
 
 - add health checks, structured logging, alerting, and retry policies;
-- add CI for dbt compilation and broader Python quality checks (lint/type); and
+- add CI for dbt compilation and type checking; and
 - resolve Connecticut planning-region FIPS in Realtor data that do not map to
   Census county geographies (today the dbt relationship test warns on these rows).
 

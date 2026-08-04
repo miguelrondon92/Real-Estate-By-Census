@@ -9,3 +9,4 @@ minio
 pyarrow
 dbt-duckdb
 pytest
+ruff

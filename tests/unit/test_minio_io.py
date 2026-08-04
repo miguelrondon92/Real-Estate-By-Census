@@ -19,8 +19,7 @@ def test_save_to_minio_creates_bucket_and_uploads_parquet():
 
     assert client.put_object.call_count == 2
     uploaded = {
-        call.kwargs["object_name"]: call.kwargs
-        for call in client.put_object.call_args_list
+        call.kwargs["object_name"]: call.kwargs for call in client.put_object.call_args_list
     }
     assert set(uploaded) == {
         "raw/realtor/realtor.parquet",

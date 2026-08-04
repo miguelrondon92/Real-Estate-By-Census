@@ -1,8 +1,11 @@
 import geopandas as gpd
-from etl import get_minio_client 
+
+from etl import get_minio_client
+
 client = get_minio_client()
 
-def main(client): 
+
+def main(client):
     input_file = "data/cb_2018_us_county_500k/cb_2018_us_county_500k.shp"
     output_file = "data/reference/counties.parquet"
 
@@ -23,6 +26,7 @@ def main(client):
     )
 
     print("Uploaded county boundaries")
+
 
 if __name__ == "__main__":
     main(client)
