@@ -9,9 +9,7 @@ def test_normalize_county_fips_pads_short_codes():
     assert list(result) == ["06037", "01001", "00001"]
 
 
-def test_process_realtor_df_normalizes_fips_and_state(
-    sample_realtor_df, state_abrevs
-):
+def test_process_realtor_df_normalizes_fips_and_state(sample_realtor_df, state_abrevs):
     result = process_realtor_df(sample_realtor_df, state_abrevs)
 
     assert list(result["county_fips"]) == ["06037", "01001"]
@@ -29,7 +27,7 @@ def test_process_realtor_df_rejects_multiple_months(state_abrevs):
         }
     )
 
-    with pytest.raises(Exception, match="more than one date"):
+    with pytest.raises(Exception, match="more than one month_date_yyyymm"):
         process_realtor_df(realtor_df, state_abrevs)
 
 

@@ -1,10 +1,11 @@
-import streamlit as st
-import pandas as pd
-import geopandas as gpd
+import branca.colormap as cm
+import duckdb
 import folium
+import geopandas as gpd
+import streamlit as st
 from folium.features import GeoJsonTooltip
 from streamlit_folium import st_folium
-import duckdb
+
 
 # -------------------------
 # Load your data
@@ -38,6 +39,7 @@ def load_data():
     main_df = counties.merge(metrics, on="county_fips", how="inner")
 
     return gpd.GeoDataFrame(main_df, geometry="geometry", crs="EPSG:4326")
+
 
 main_df = load_data()
 
@@ -107,8 +109,6 @@ filtered_df = main_df[
 m = folium.Map(location=[37.8, -96], zoom_start=4)
 
 # Color mapping (similar to colorFactor)
-import branca.colormap as cm
-
 unique_vals = filtered_df["county_pop_size"].dropna().unique()
 colormap = cm.linear.Set1_09.scale(0, len(unique_vals))
 val_to_color = {val: colormap(i) for i, val in enumerate(unique_vals)}

@@ -1,0 +1,24 @@
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["etl", "tests", "airflow/dags", "streamlit"]
+extend-exclude = [
+  ".venv",
+  "dbt/target",
+  "dbt/logs",
+  "data",
+]
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "W",   # pycodestyle warnings
+  "F",   # pyflakes
+  "I",   # isort
+  "UP",  # pyupgrade
+  "B",   # bugbear
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Airflow DAG modules are import-path sensitive; keep top-level DAG imports simple.
+"airflow/dags/*" = ["E402"]

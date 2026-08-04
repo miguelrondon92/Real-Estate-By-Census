@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-
 URL = "https://www.realtor.com/research/data/"
 
 
@@ -21,25 +20,15 @@ def get_realtor_update_text():
 
     soup = BeautifulSoup(response.text, "html.parser")
 
-    section = soup.find(
-        "div",
-        class_="monthly-inventory download-section"
-    )
+    section = soup.find("div", class_="monthly-inventory download-section")
 
     if not section:
-        raise ValueError(
-            "Could not find monthly inventory section"
-        )
+        raise ValueError("Could not find monthly inventory section")
 
-    update_text = section.find(
-        "p",
-        class_="info"
-    )
+    update_text = section.find("p", class_="info")
 
     if not update_text:
-        raise ValueError(
-            "Could not find update text"
-        )
+        raise ValueError("Could not find update text")
 
     return update_text.text.strip()
 
